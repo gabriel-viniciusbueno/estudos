@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferentes maneiras de se criar um evento</title>
+
+    <script>
+        function f1(){
+            
+        }
+
+        function f2(){
+            console.log('teste f2')
+        }
+
+        window.onload = function(){
+            let h1 = document.getElementByTagName('h1')[0]
+
+            h1.addEventListener('click', f2)
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="f()">Título</h1>
+</body>
+</html>

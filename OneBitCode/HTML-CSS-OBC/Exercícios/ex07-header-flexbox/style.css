@@ -1,0 +1,43 @@
+body{
+    background-color: #333;
+    margin: 0;
+}
+
+img{
+    width: 250px;
+}
+
+#maozinha{
+    width: 50px;
+}
+
+.flex-container{
+    background-color: #000;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header-info{
+    display: flex;
+    gap: 10px;
+}
+
+.header-link{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    border: 2px solid #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.header-link:hover{
+    border: 2px solid #ff0044;
+    color: #ff0044;
+}

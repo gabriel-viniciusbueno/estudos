@@ -1,0 +1,73 @@
+@keyframes changeColor {
+    /* Ao invés de from e to, é possível usar porcentagens. Assim como mudar outras propriedades*/
+    /* 0%{ background-color: red; width: 200px;}
+    50%{background-color: goldenrod; width: 400px;}
+    100%{background-color: blue; width: 200px;} */
+}
+
+@keyframes move {
+    0%{left: 0px;}
+    50%{left: 500px;}
+    100%{left: 0px;}
+}
+.box{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    /* animation-name: move; */
+    /* animation-duration: 2s; */
+
+
+    /* animation-delay: 1s; Faz um atraso na animação  
+    
+    animation-iteration-count: infinite;  Define qunatas vezes a animação será feita. Pode receber um número ou o valor 'infinito' 
+
+    animation-direction: reverse;
+    Faz com que a animação siga ao contrário, indo de 100% a 0%
+    animation-direction: alternate; Alternate primeiro segue a ordem, daí inverte, aí segue de novo, e assim vai até a animação acabar*/
+
+     /* animation-fill-mode: both; */
+    /*Isso faz com que nossa animação termine e comece apropriadamente, sem o fundo branco. Backwards faria com que a animação terminasse no começo */
+
+    /* ShortHand */
+    animation: move 5s linear 0s infinite normal both;
+}
+
+.div1{
+    animation-timing-function: linear;
+}
+.div2{
+    animation-timing-function: ease;
+}
+.div3{
+    animation-timing-function: ease-in;
+}
+.div4{
+    animation-timing-function: ease-out;
+}
+.div5{
+    animation-timing-function: ease-in-out;
+}
+
+.btn{
+    display:inline-block;
+    padding: 20px;
+    background: #428BCA;
+    color: #FFF;
+    font-size: 30px;
+    cursor: pointer;
+    /* transition-property: background-color, padding;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s; */
+
+    /* Shorthand */
+    transition: background-color 500ms, padding 3s;
+
+
+}
+
+.btn:hover{
+    background-color: #2248CA;
+    padding: 30px;
+}

@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    /* align-items: center; */
+    /* align-content: center; */
+
+    background-color: darkgray;
+    height: 400px;
+    color: white;
+}
+
+.r1{
+    flex-grow: 1;
+    background-color: royalblue;
+}
+
+.r2{
+    /* Flex grow permite que o elemento aumente de acordo com o espaço disponível */
+    flex-grow: 1;
+
+    /* Utilizando 'align items' individualmente */
+    align-self: flex-end;
+    background-color: orangered;
+}
+
+.r3{
+    /* order: -1; */
+    flex-grow: 1;
+    background-color: green;
+}
+
+.rect{
+
+    height: 150px;
+}

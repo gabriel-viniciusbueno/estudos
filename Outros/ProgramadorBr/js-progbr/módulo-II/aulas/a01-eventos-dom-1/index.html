@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos do DOM</title>
+
+    <script>
+        function changeH1(){
+            const input = document.getElementById('texto')
+            const title = document.getElementsByTagName('h1')[0] // Já que getElementsByTagName retorna um array, é necessário dizer que é o primeiro elemento que queremos
+
+            title.innerText = input.value
+        }
+    </script>
+</head>
+<body>
+
+
+    <h1>Clique</h1>
+
+    <input type="text" id="texto" onchange="changeH1()">
+</body>
+</html>

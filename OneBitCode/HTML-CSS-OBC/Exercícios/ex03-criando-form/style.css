@@ -1,0 +1,8 @@
+form{
+    margin: 20px;
+}
+
+label, input, textarea, select{
+    margin: 10px;
+    padding: 5px;
+}

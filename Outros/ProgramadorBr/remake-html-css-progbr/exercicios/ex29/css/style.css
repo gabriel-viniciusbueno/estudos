@@ -1,0 +1,58 @@
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(to bottom right, cornflowerblue, white);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background-color: slateblue;
+    padding: 10px;
+
+    width: 500px;
+    margin: auto;
+
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.674);
+
+    text-transform: capitalize;
+}
+
+h1{
+    text-align: center;
+}
+
+.lista{
+    list-style: upper-latin;
+    list-style-position: inside;
+    width: 200px;
+    padding: 0;
+    margin: auto;
+}
+
+li{
+    background-color: gold;
+    border: 1px solid goldenrod;
+    margin-bottom: 15px;
+    padding: 5px;
+
+    border-radius: 5px;
+
+
+    /* A propriedade CURSOR tem o objetivo de indicar ao usuário como ele pode interagir com esse elemento. Temos vários jeitos diferentes de usar essa propriedade.  */
+
+    cursor: pointer;
+
+    /* Também é possível colocar um cursor personalizado passando uma url e um valor default. No caso:
+    
+    cursor: url('./assets/cursor-personalizado.png'), pointer;
+    */
+
+    transition: 0.2s;
+}
+
+li:hover{
+    transition: 0.2s;
+    background-color: black;
+    color: yellow;
+}

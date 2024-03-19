@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando um Sorteio</title>
+
+    <script defer>
+        const pessoas = ['Igor', 'Gabriel', 'Joao', 'mateus', 'henrique']
+
+        function sortear(){
+            let np = pessoas.length
+
+            let ns = Math.round(Math.random() * (np - 1))
+
+            document.getElementById('d').innerText = 'O sorteado é: ' + pessoas[ns] + `(${ns})`
+        }
+    </script>
+</head>
+<body>
+
+    <h1 id="d"></h1>
+    <button onclick="sortear()">Sortear</button>
+</body>
+</html>

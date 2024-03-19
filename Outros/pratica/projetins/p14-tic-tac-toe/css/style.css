@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  font-size: 62.5%;
+  background-color: #222;
+  color: #FFF;
+
+}
+
+h1{
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  background-color: #ffc800;
+  padding: 0.5rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.316);
+
+  /* position: absolute;
+  top: 0; */
+
+  font-weight: bold;
+  text-transform: capitalize;
+
+  color: #222;
+  z-index: 2;
+}
+
+.alert-error.open{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.alert-error{
+
+  position: absolute;
+  top: 0;
+  width: 100vw;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.06rem;
+  text-align: center;
+
+  background-color: #f73e3e;
+  padding: 2px 0;
+
+  visibility: 0;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform 0.7s;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.form-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 0.5rem;
+  /* margin: 1.5rem; */
+  gap: 10px 0;
+  
+  flex: 1 0 0;
+  font-size: 1.5rem;
+  font-familY: 'Poppins', sans-serif;
+
+  width: 45%;
+
+}
+
+
+
+.form-container input{
+  padding: 0.5rem;
+  width: 55%;
+
+  border-radius: 0.2rem;
+}
+
+.form-container input::placeholder{
+  color: #222;
+}
+
+.form-container button{
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.3rem;
+  margin-top: 10px;
+  width: 25%;
+  border: 1px solid #ffc800;
+  border-radius: 0.2rem;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px #00000082;
+  color: #ffc800;
+  background-color: #222;
+
+  transition: 0.3s;
+
+  /* display: none; */
+}
+
+.form-container button:hover{
+  background-color: #ffc800;
+  color: #222;
+  scale: 1.05;
+}
+
+.board-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+.gameboard{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.board-container h2{
+  margin-bottom: 2rem;
+}
+
+.game-cards{
+  width: 90px;
+  height: 90px;
+  background-color: #111;
+  border: 1px solid #fff;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.game-cards:hover{
+  scale: 1.06;
+  background-color: #ffc800;
+}
+
+.highlight{
+  background-color: #045b04;
+}
+
+.reset-container{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.463);
+
+  color: #222;
+  font-family: 'Poppins';
+  font-weight: bold;
+
+  font-size: 1.1rem;
+
+  opacity: 0;
+
+}
+
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+
+  width: 35%;
+  height: 20%;
+  /* width: 100%; */
+  background-color: #ffc800;
+  box-shadow: 0 0 10px #000000a9;
+
+  border-radius: 4px 4px 5px 5px;
+
+
+}
+
+.reset-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.reset-modal h2{
+  padding: 10px;
+}
+
+.reset-container button{
+
+  width: 100%;
+  padding: 0.3rem 0.1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+  
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  box-shadow: 0 -1px 7px #0000003d;
+
+  transition: 0.4s;
+}
+
+.reset-container button:hover{
+  background-color: #000;
+  color: #ffc800;
+}
+
+.game-cards{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3rem;
+}
+
+
+
+/* Hidden */
+.hide{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show-restart-modal{
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+
+footer{
+  color: white;
+  padding: 0.3rem;
+  background-color: #111;
+  width: 100%;
+  text-align: center;
+
+  font-size: 1rem;
+}
+
+
+@media (max-width: 506px) {
+  .modal-container{
+    border-radius: 4px 4px 0 0;
+  }
+}

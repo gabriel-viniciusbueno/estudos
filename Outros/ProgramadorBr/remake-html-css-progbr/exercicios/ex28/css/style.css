@@ -1,0 +1,47 @@
+html{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom right, cornflowerblue, white);
+}
+
+#container{
+    width: 400px;
+    margin: auto;
+}
+
+ul{
+    list-style: circle;
+    list-style-position: inside;
+    padding: 15px;
+
+    background-color: slateblue;
+    box-shadow: -1px -1px 2px black;
+
+/* 
+   list-style-image: url('');
+
+    Quando queremos utilizar um "logo" personalizado para nossas listas é de extrema importância que a imagem esteja na proporção correta (16x16 na maioria das vezes), pois não podemos modificá-la.
+*/
+}
+
+ol{
+    list-style: upper-roman;
+    background-color: slateblue;
+    box-shadow: -1px -1px 2px black;
+
+    list-style-position: inside;
+    padding: 15px;
+}
+
+li{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+
+    border-radius: 5px;
+    background-color: rgb(238, 203, 1);
+}
+

@@ -1,0 +1,18 @@
+body{
+    background-color: paleturquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#div1{
+    width: 50vh;
+    height: 50vw;
+    background-color:yellow;
+}
+
+#div2{
+    background-color: slateblue;
+    width: 50vw; /*width baseado em Viewport width */
+    height: 50vh; /*height baseado em Viewport height */
+    background-image: url('./Ceramica.jpg');
+    background-attachment: fixed;
+}

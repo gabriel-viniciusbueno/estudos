@@ -1,0 +1,33 @@
+/* As fontes sem serifa mais comuns são Arial e Helvetica(mac) */
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, paleturquoise 450px, white 600px) ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+#t1{
+    color: orangered;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: italic;
+    text-shadow: 2px 1px 1px black;
+    /* Todos as tags que mudam o design do conteúdo no HTML podem ser encotradas como propriedades no CSS. Usar essas tags apenas para um fim semântico*/
+}
+
+#p1{
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+
+    font-variant: small-caps;
+    /*Essa propriedade deixa todas as letras em maiúsculo, porém respeitando a diferença de tamanho entre as letras que já eram maiúsculas. */
+}
+
+#t2{
+    font-size: 25px;
+    font-weight: 800;
+    /* Normalmente, o WEIGHT padrão de fonte seria 400/500  */
+
+}

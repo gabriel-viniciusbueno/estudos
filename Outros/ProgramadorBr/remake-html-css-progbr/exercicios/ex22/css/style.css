@@ -1,0 +1,33 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, paleturquoise, 200px, snow);
+    font-family: "Comic Sans MS", cursive;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    color:crimson;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.615);
+}
+
+p{
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+    font-weight: 200px;
+}
+
+#container{
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    background-color: thistle;
+    padding: 20px;
+
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.56);
+    border-radius: 0px 25px;
+}

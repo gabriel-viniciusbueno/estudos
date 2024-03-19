@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-tac-toe Game</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <section class="page-container">
+
+    <h1>Jogo da velha!</h1>
+    
+    <div class="form-container">
+      <p class="alert-error">Insira o nome de todos os jogadores</p>
+      <label for="nameP1">Nome do jogador 1:</label>
+      <input type="text" name="nameP1" id="p1Name" placeholder="name">
+      <label for="nameP2">Nome do jogador 2:</label>
+      <input type="text" name="nameP2" id="p2Name" placeholder="name">
+
+      <button type="button">Start!</button>
+    </div>
+
+    <!-- O jogo vai aqui -->
+    <div class="board-container hide">
+      <h2>Vez do: <span></span></h2>
+
+        <div class="gameboard ">
+          <div class="game-cards" data-field="1.0"></div>
+          <div class="game-cards" data-field="1.1"></div>
+          <div class="game-cards" data-field="1.2"></div>
+          <div class="game-cards" data-field="2.0"></div>
+          <div class="game-cards" data-field="2.1"></div>
+          <div class="game-cards" data-field="2.2"></div>
+          <div class="game-cards" data-field="3.0"></div>
+          <div class="game-cards" data-field="3.1"></div>
+          <div class="game-cards" data-field="3.2"></div>
+        </div>
+
+    </div>
+
+    <!-- Tela final -->
+    <div class="reset-container hide">
+
+      <div class="modal-container">
+        <div class="reset-modal">
+          <h2><span>Gabriel</span> ganhou o jogo!</h2>
+        </div>
+        <button type="button">Reiniciar</button>
+      </div>
+
+    </div>
+
+
+
+    <footer>@PROJETÃO</footer>
+
+  </section>
+
+</body>
+
+</html>

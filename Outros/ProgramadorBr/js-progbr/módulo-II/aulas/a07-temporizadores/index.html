@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizadores</title>
+
+    <script defer>
+        function mudarCor(){
+            title.style.color = '#F65'
+        }
+        function mudarTexto(){
+            const title = document.getElementById('title')
+            title.innerText = 'Novo Título'
+
+            setTimeout(mudarCor, 1000)
+        }
+
+        let numero = 0 
+        let interval
+
+        function atualizarTexto(){
+            let h = document.getElementById('title')
+            h.innerText += ' ' + numero
+            numero++
+        }
+
+        function iniciar(){
+            timer = setInterval(atualizarTexto, 1000)
+        }
+
+        function parar(){
+            clearInterval(interval)
+        }
+    </script>
+</head>
+<body>
+    
+    <h1 id="title">Título</h1>
+    <input type="submit" value="Mudar" onclick="mudarTexto()">
+    <input type="submit" value="iniciar" onclick="iniciar()">
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    background-color: paleturquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    background-color: yellow;
+    font-size: 25px;
+}
+
+.ex1{
+
+}
+
+.ex2{
+    font-size: 2em; 
+    /* EM é uma unidade de medida que é baseada no tamanho padrão que a fonte deveria ter, nesse caso seria 25px (definido na class container) */
+}
+
+.ex3{
+    font-size: 2em;
+    /* quando não definimos um tamanho padrão para a fonte, ela terá o valor de 16px (ex3 não está herdando os 25px do container). Logo, 2em terá o valor de 32px */
+}
+
+.ex4{
+    font-size: 2rem;
+    /* REM seria a unidade de medida que vai ter como base a raiz do código. Se não definirmos nada, será 16px. Porém, a partir do momento que mudamos o HTML (tag raíz), REM a terá como base. Nesse caso, 2rem terá 20px, enquanto o ex3 (2em) terá 30px (herdando do Body, não do HTML). */
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 15px;
+}

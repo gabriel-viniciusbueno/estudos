@@ -1,0 +1,9 @@
+/* É possível utilizar vírgula */
+div, header{
+    background-color:aquamarine
+}
+
+/* apenas os parágrafos dentro de div */
+div p{
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs do HTML5</title>
+</head>
+<body>
+
+    <!--Can I Use-->
+    <!--Com a versão 5 do HTML, várias tags novas foram craidas para aprimorar a experiência. Contudo, nem todas eram 100% compatíveis com todos os navegadores, então sempre quando estiver desenvolvendo um projeto é importante checar algumas tags no Can I Use (site que mostra a compatibilidade com os navegadores)-->
+
+
+
+    <!--Novos Inputs para formulários HTML5-->
+
+    <form method="GET" action="/">
+
+
+        <input type="color" name="cor"> <!--Na época da gravação, não existia uma boa compatibilidade desse input com a versão IOS do Safari-->
+        <br>
+
+        <input type="date" name="data"> <!--Campo de data-->
+        <br>
+
+        <input type="file" name="arquivo"> <!--Um detalhe muito importante: Quando estamos enviando um arquivo para o servidor, é obrigatório que o método do formulário seja POST-->
+        <br>
+
+        <input type="number" name="numerico"
+        min="1" max="10"> <!--Campo apenas para digitar números-->
+        <br>
+
+        <input type="range" name="intervalo" value="9" min="1" max="10"> <!--É uma barrinha de rolagem que pode passar um valor-->
+        <br>
+
+        <input type="tel" name="telefone"> <!--No destktop é difícil notar a diferença desse input para um de text, mas o que ele faz é ativar o teclado numérico.É mais funcional no celular-->
+        <br>
+
+        <input type="Email" name="email"> <!--Esse input verifica se o que está sendo enviado é de fato um email-->
+
+        <br>
+        <input type="submit">
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background-color: #222;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header > img{
+    width: 250px;
+}
+
+.header > ul{
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+    padding: 10px;
+}
+
+.button{
+    font-size: 16px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s;
+}
+
+.button:hover{
+    border-bottom: 1px solid #ff2525;
+    color: #ff2525;
+}
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: 500;
+}
+
+.subtitle{
+    text-align: center;
+    color: #444;
+}
+
+.main-content{
+
+}
+
+.sports{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    
+}
+.sport{
+    border: 1px solid black;
+}
+
+.sport > img{
+    width: 250px;
+}

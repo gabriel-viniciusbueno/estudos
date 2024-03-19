@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Na criação de um formulário, precisamos definir: o método de envio com METHOD (GET ou POST); e Qual a ACTION.-->
+
+    <!--Sobre ACTION: quando criamos um WebService ou um API (algo que está esperando esses dados), teremos o end-point (que seria o endereço que usamos para criar uma requisição)-->
+    
+
+    <!--
+        <form method="GET" action="/cadastro"
+    ------------------------------------------------------------------------
+     Se o FrontEnd não estiver rodando no mesmo enredeço que o webservice, precismos usar http:// 
+    ------------------------------------------------------------------------
+
+    Input text é um campo de texto
+    ------------------------------------------------------------------------
+    <input type="text" name="nome">
+    <input type="text" name="email">
+    ------------------------------------------------------------------------
+
+    Input submit é um campo de envio
+    ------------------------------------------------------------------------
+    <input type="submit" >
+
+        </form>
+    -->
+
+
+    <!--Quando usamos o método GET no formulário, os dados enviados serão exibidos no endereço (nesse caso, url). Para evitar isso, o correto é o método POST-->
+
+    <div class="container">
+        <div class="containers login">
+            <h1>Login</h1>
+            <form method="POST" action="/cadastro">
+                <input class="input-login" type="text" name="nome" placeholder="Nome">
+                <input class="input-login" type="text" name="email" placeholder="Email">
+                <input type="submit">
+            </form>
+        </div>
+        <!--Com GET é possível pegar a action e input de outros sites-->
+        <!--Leva para um Vídeo-->
+        <div class="containers video">
+            <h1>Vídeo</h1>
+            <form method="GET" action="https://www.youtube.com/watch?">
+                <input type="text" name="v" placeholder="Código do Vídeo">
+                <input type="submit">
+            </form>
+        </div>
+        <!--Sere como barra de pesquisa do Youtube-->
+        <div class="containers search">
+            <h1>Search do Youtube</h1>
+            <form method="GET" action="https://www.youtube.com/results">
+                <input type="text" name="search_query" placeholder="Pesquisar">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

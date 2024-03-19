@@ -1,0 +1,12 @@
+
+.inline{
+    display: inline-block;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+input, select{
+    margin-bottom: 15px;
+}

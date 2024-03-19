@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom right, thistle, white);
+    padding: 0;
+    margin: 0;
+}
+
+.quadrado{
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    text-align: center;
+
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+
+/* O modelo de caixas pode variar muito de acordo com as propriedades que colocamos, como por exemplo border e padding.*/
+
+.vermelho{
+    background-color: crimson;
+    border: 5px solid black;
+    padding: 10px;
+
+    /* Com border e padding, esse elemento ganhou 15px de largura e altura*/
+}
+
+.azul{
+    background-color:slateblue;
+
+    /*Quando queremos utilizar essas propriedades sem que a proporção do elemento seja alterada, podemos usar box-sizing: borderbox; Assim o elemento manterá os valores iniciais passados para ele (100px). */
+
+    box-sizing: border-box;
+    border: 5px solid black;
+    padding: 10px;
+
+    /* Aqui o conteúdo ficou bem espremido dentro do quadrado pois ele manteve o tamanho de 100px. */
+}
+
+.verde{
+    background-color: chartreuse;
+    color: crimson;
+    padding: 25px;
+    border: 5px solid black;
+    box-shadow: 1px 1px 2px black;
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.442);
+}

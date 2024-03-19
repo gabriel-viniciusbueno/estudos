@@ -1,0 +1,86 @@
+body{
+    background: linear-gradient(to right,lightblue, snow);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    width:600px;
+    font-size: 1.3em;
+}
+
+#cor{
+    color: orangered;
+}
+
+#ajuste{
+    text-transform: capitalize;
+    /* É uma transformação que muda todas as letras inicias das palavras, tornando-as letras maiúsculas. Também é existe "LOWERCASE" e "UPPERCASE", que modifica todas as letras */
+}
+
+#decoracao{
+    text-decoration: underline line-through overline;
+    /* Text decoration é o responsável por modificar as decorações de um texto, seja para adicionar ou retirar daqueles que já vem por padrãom, como o LINK por exemplo. */
+}
+
+#link1{
+    color: green;
+    text-decoration: none;
+}
+
+#alinhamento{
+    text-align: right;
+    /* serve para alinhar o texto em alguma direção (o padrão é left). Também é possível utilizar JUSTIFY, mas só ficará perceptível no próximo exemplo. */
+}
+
+#justify{
+    text-align: justify;
+    /* justify vai alterar a distância entre as palavras para preencher todo o espaço disponível. */
+}
+
+/* Espacamento entre letras */
+#espacamento{
+    letter-spacing: 10px;
+}
+
+#espacamento2{
+    letter-spacing: -3px;
+}
+
+/* Espacamento entre palavras */
+#espacamento3{
+    text-transform: capitalize;
+    word-spacing: 10px;
+}
+
+#espacamento4{
+    text-transform: capitalize;
+    word-spacing: -10px;
+}
+
+/* Espaçamento entre Linhas */
+
+#espacamento5{
+    text-transform: capitalize;
+    line-height: 3em;
+}
+
+#espacamento6{
+    text-transform: capitalize;
+    line-height: 10px;
+}
+
+/* Voltando à outras propriedades */
+
+#identacao{
+    text-indent: 40px;
+    /* text indent é à margem que damos ao parágrafo */
+}
+
+#sombra{
+    color: gold;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+
+    text-shadow: 2px 1px 2px black;
+}

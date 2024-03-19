@@ -1,0 +1,19 @@
+p::first-line{
+    color: red;
+}
+
+p::first-letter{
+    color: aqua;
+}
+
+li{
+    list-style: none;
+}
+
+li::before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    /* background-image: ; */
+}

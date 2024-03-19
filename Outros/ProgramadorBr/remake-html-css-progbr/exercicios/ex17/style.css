@@ -1,0 +1,30 @@
+body{
+    background-color: paleturquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    padding: 0px;
+    margin: 0px;
+}
+
+#div1{
+    /* Algumas unidades de medidas fixas que podemos utilizar */
+    background-color: yellow;
+    width: 25pc;
+    height: 2in;
+    font-size: 10pt;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.402);
+    /* Dificilmente utilizaremos essas unidades de medida, pois se tratando de unidades fixas, a medida de px se mostra mais usual e adaptável para cada tipo de tela */
+}
+
+#div2{
+    background-color: orange;
+    width: 700px;
+    height: 400px;
+    font-size: 25px;
+    padding: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.455);
+}

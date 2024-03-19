@@ -1,0 +1,79 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: consolas, monospace;
+}
+
+body{
+  padding: 15px;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgb(221, 83, 110) 10%, #fe8766 80%);
+
+  
+}
+
+.timer-btn{
+  width: 9rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  border: 3px solid;
+  border-radius: 12px;
+  background-color: #333;
+  color: #f54646;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.timer-btn:hover{
+  scale: 1.1;
+  background-color: #333;
+  color: #f54646;
+  cursor: pointer;
+}
+
+#time-display{
+  font-size: 8rem;
+  color: #f54646;
+  margin-bottom: 10px;
+}
+
+#time-container{
+  max-width: 60rem;
+  height: 20rem;
+  margin: auto;
+  /* padding: 5px; */
+
+  display: flex;
+  flex-direction: column;
+  border: 3px solid;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+  background-color: #222;
+}
+
+#btn-container{
+  display: flex;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  gap: 15px;
+}
+
+@media (max-width: 590px){
+  *{
+    font-size: 8px;
+  }
+
+  .timer-btn{
+    width: 9rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: 3px solid;
+    border-radius: 10px;
+  
+  }
+}

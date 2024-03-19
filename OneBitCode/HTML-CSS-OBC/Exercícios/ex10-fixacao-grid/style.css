@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #555;
+    color: #ff2929;
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    /* grid-template-rows: 2fr 3fr; */
+    grid-auto-rows: minmax(330px, auto);
+    gap: 10px;
+}
+
+.grid-item{
+    border: 1px solid #f32323;
+    background-color: #222;
+}
+
+.grid-content{
+    font-size: 25px;
+    padding: 10px;
+}

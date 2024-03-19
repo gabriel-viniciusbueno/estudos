@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+    <script>
+        //Local storage possui 3 métodos principais
+
+
+        //Passamos 2 argumentos. O primeiro vai ser uma chave e o segundo o valor
+        // localStorage.setItem('nome', 'gabriel')
+
+        let n = localStorage.getItem('nome')
+        console.log(n) // A partir do momento que armazenei na memória o valor da chave, mesmo comentando e tirando do código, getItem ainda consegue acessar o valor da chave 'nome'
+
+        localStorage.removeItem('nome') // Agora deletamos da memória
+    </script>
+</head>
+<body>
+    <h1>Trabalhando com persostência de dados</h1>
+</body>
+</html>

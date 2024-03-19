@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Input</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Questionário</h1>
+        <form method="GET" action="/">
+            <h2>LOGIN:</h2>
+            <input type="text" name="email" placeholder="Email">
+        
+        <!-- Além de Inputs como text e submit, existem outros tipos para ocasiões diferentes.-->
+            <input type="password" name="senha" placeholder="Senha"> <!--Password esconde a informação colocada no campo, essencial para senhas. Porém é importante relembrar: com o Method GET a senha ficará visível na URL. -->
+            <!--Outro tipo de Input é o Checkbox, que serve para criar caixas de opção. Quando vamos fazer algo assim com checkbox, é necessário o atributo VALUE="opção" para podermos identificar as opções marcadas e desmarcadas -->
+            <br>
+            <h2>EXPERIÊNCIAS:</h2>
+            <input type="checkbox" name="curso" value="op1"> <span>React Native</span>
+            <br>
+            <input type="checkbox" name="curso" value="op2"> <span>React Js</span>
+            <br>
+            <input type="checkbox" name="curso" value="op3"> <span>Node Js</span>
+            <br>
+
+            <h2>GÊNERO:</h2>
+            <!--No caso de RADIO, apenas uma opção pode estar selecionada. É importante que todas as opções tenham o mesmo nome.-->
+            <input type="radio" name="genero" value="m"> <span>Masculino</span>
+            <br>
+            <input type="radio" name="genero" value="f"> <span>Feminino</span>
+            <br>
+            <!--Caso seja interessante abrir a página com alguma opção já marcada, basta colocar o atributo CHECKED-->
+            <!--O Input RESET serve para resetar os campos de volta ao padrão. Para mudar o nome basta adicionar um valor a ele.-->
+            <input class="buttom resetar" type="reset" value="Resetar">
+            <input class="buttom concluir" type="submit" value="Concluir">
+        </form>
+    </div>
+    
+</body>
+</html>
