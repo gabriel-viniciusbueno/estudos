@@ -1,8 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: 'WorkSans';
   src: url('../assets/fonts/static/WorkSans-Regular.ttf')
 }
-
 body{
+  font-family: 'WorkSans', sans-serif;
+  background-color: hsl(277, 81%, 94%);
+  background-image: url(../assets/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  
+}
+
+.faq-container{
+
+}
+
+.faq-container-content{
+  max-width: 40%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
 
 }
