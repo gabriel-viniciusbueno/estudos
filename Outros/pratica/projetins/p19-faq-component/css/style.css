@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('../assets/fonts/static/WorkSans-Regular.ttf')
+  src: url('../assets/fonts/WorkSans-VariableFont_wght.ttf')
 }
 body{
   font-family: 'WorkSans', sans-serif;
@@ -15,18 +15,53 @@ body{
   background-size: 100%;
   box-sizing: border-box;
   display: grid;
+  min-height: 100vh;
   place-content: center;
-  
 }
 
 .faq-container{
+  max-width: 800px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  color: hsl(292, 42%, 14%);
 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.078);
+  
 }
 
-.faq-container-content{
-  max-width: 40%;
-  background-color: white;
-  border-radius: 15px;
-  padding: 10px;
+.faq-headline{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
 
+.faq-headline h1{
+  font-size: 3rem;
+}
+
+.question{
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(179, 179, 179, 0.26);
+}
+
+.question-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  padding: 0.7rem 0 0.7rem 0;
+
+  font-family: 'WorkSans';
+  font-weight: bold;
+  color: hsl(292, 42%, 14%);
+  font-size: 1.1rem;
+}
+
+.question-answer{
+  color: hsl(292, 16%, 49%);
+  margin-bottom: 1rem;
 }
