@@ -19,6 +19,11 @@ body{
   place-content: center;
 }
 
+#border{
+  color: black;
+  opacity: 0.2;
+}
+
 .faq-container{
   max-width: 800px;
   background-color: white;
@@ -33,7 +38,7 @@ body{
 
 .faq-headline{
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -42,19 +47,18 @@ body{
 }
 
 .question{
-  margin-top: 1rem;
-  border-bottom: 1px solid rgba(179, 179, 179, 0.26);
+  margin-top: 0.9rem;
 }
 
 .question-btn{
   width: 100%;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: space-between;
   background: transparent;
   border: none;
   padding: 0.7rem 0 0.7rem 0;
-  gap: 10px;
+  gap: 1rem;
 
   font-family: 'WorkSans';
   font-weight: bold;
