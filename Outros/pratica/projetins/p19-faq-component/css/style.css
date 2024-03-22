@@ -33,7 +33,7 @@ body{
 
 .faq-headline{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 1.5rem;
 }
 
@@ -49,19 +49,36 @@ body{
 .question-btn{
   width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   background: transparent;
   border: none;
   padding: 0.7rem 0 0.7rem 0;
+  gap: 10px;
 
   font-family: 'WorkSans';
   font-weight: bold;
   color: hsl(292, 42%, 14%);
-  font-size: 1.1rem;
+  font-size: 1rem; 
+
+  cursor: pointer;
+  transition: .5s;
+}
+
+.question-btn:hover{
+  color: #AD28EB;
+}
+
+.question-btn p {
+text-align: start;
 }
 
 .question-answer{
   color: hsl(292, 16%, 49%);
   margin-bottom: 1rem;
+}
+
+.hide{
+  display: none;
+  opacity: 0;
 }
