@@ -6,8 +6,7 @@ const plusBtn = document.querySelectorAll('.plus-btn')
 const answer = document.querySelectorAll('.question-answer p')
 
 questionBtn.forEach((btn) => {
-
-  btn.target.addEventListener('click', (e) => {
-
+  btn.addEventListener('click', function (){
+    this.classList.toggle('hide')
   })
 })
