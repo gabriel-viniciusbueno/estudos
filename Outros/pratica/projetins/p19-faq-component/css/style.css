@@ -77,12 +77,19 @@ body{
 text-align: start;
 }
 
+.question-btn .minus-btn{
+  display: none;
+}
+
 .accordion-content{
   color: hsl(292, 16%, 49%);
   margin-bottom: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease;
 }
-
+/* 
 .hide{
   display: none;
   opacity: 0;
-}
+} */
