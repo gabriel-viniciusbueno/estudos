@@ -61,6 +61,7 @@ body{
 .avatar-section{
   margin-top: 20px;
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -72,13 +73,24 @@ body{
 .share-icon{
   margin-left: auto;
   align-self: center;
-  width: 20px;
-  height: 20px;
+  width: 3rem;
+  /* height: 50px; */
+  /* height: 30px; */
+  /* border-radius: 50%; */
+  padding: 5px;
+}
+
+.share-icon:hover{
+  color: var(--component-color);
+  background-color: var(--light-gray);
 }
 
 .avatar-info h2{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
+.share-section{
+  background-color: var(--light-gray);
+}
 
 
