@@ -90,7 +90,18 @@ body{
 }
 
 .share-section{
-  background-color: var(--light-gray);
+  width: 230px;
+  background-color: var(--headline-color);
+  padding: 1rem;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.share-section p{
+  color: var(--light-gray);
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 
