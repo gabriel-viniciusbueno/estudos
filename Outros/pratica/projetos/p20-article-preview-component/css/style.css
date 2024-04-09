@@ -62,7 +62,10 @@ body{
   margin-top: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+
+  position: relative;
 }
 
 .michelle-avatar{
@@ -72,7 +75,7 @@ body{
 
 .share-icon{
   margin-left: auto;
-  align-self: center;
+  justify-self: flex-end;
   width: 3rem;
   /* height: 50px; */
   /* height: 30px; */
@@ -83,6 +86,10 @@ body{
 .share-icon:hover{
   color: var(--component-color);
   background-color: var(--light-gray);
+}
+
+.avatar-info{
+  margin-right: auto;
 }
 
 .avatar-info h2{
@@ -96,12 +103,26 @@ body{
   border-radius: 0.7rem;
   display: flex;
   justify-content: space-around;
+
+
+  position: absolute;
+  top: -100%;
+  /* left: 50%; */
+
+  /* transform: translateX(-50%); */
+  transform: translateY(-50%);
 }
 
 .share-section p{
   color: var(--light-gray);
   text-transform: uppercase;
   letter-spacing: 3px;
+
 }
 
+.share-icon-container{
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
 
