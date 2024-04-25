@@ -107,7 +107,7 @@ body{
 
   position: absolute;
   top: -100%;
-  /* left: 50%; */
+  left: -100%;
 
   /* transform: translateX(-50%); */
   transform: translateY(-50%);
@@ -124,5 +124,10 @@ body{
   position: relative;
   margin-right: auto;
   margin-left: auto;
+  /* width: 100%; */
+}
+
+.share-icon-container img{
+  align-self: end;
 }
 
