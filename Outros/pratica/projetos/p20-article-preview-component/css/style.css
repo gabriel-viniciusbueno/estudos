@@ -24,6 +24,11 @@ body{
   background-color: var(--component-color);
 }
 
+a{
+  text-decoration: none;
+  color: var(--component-color)
+}
+
 .main-container{
   max-width: 800px;
   /* height: 400px; */
@@ -39,7 +44,7 @@ body{
   width: 400px;
   /* height: 100%; */
   background-image: url(../assets/drawers.jpg);
-  background-size: auto;
+  /* background-size: ; */
   background-repeat: no-repeat;
   background-position: center left;
   border-radius: 10px 0 0 10px;
@@ -73,7 +78,7 @@ body{
   border-radius: 50%;
 }
 
-.share-icon{
+.share-icon img{
   margin-left: auto;
   justify-self: flex-end;
   width: 3rem;
@@ -84,8 +89,7 @@ body{
 }
 
 .share-icon:hover{
-  color: var(--component-color);
-  background-color: var(--light-gray);
+  cursor: pointer;
 }
 
 .avatar-info{
@@ -106,11 +110,29 @@ body{
 
 
   position: absolute;
-  top: -100%;
-  left: -100%;
+  bottom: calc(100% + 28px);
+  left: 50%;
 
-  /* transform: translateX(-50%); */
-  transform: translateY(-50%);
+  transform: translateX(-50%);
+
+  scale: 0;
+  visibility: hidden;
+}
+
+.share-section.active{
+  scale: 1;
+  visibility: visible;
+}
+
+.share-section::after{
+  content: '';
+  background-color: var(--headline-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100%;
+  lefT: 50%;
+  transform: translate(-50%, -60%) rotate(45deg)
 }
 
 .share-section p{
@@ -127,7 +149,7 @@ body{
   /* width: 100%; */
 }
 
-.share-icon-container img{
+.share-icon-container a{
   align-self: end;
 }
 
