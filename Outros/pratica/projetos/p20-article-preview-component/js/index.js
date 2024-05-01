@@ -8,6 +8,7 @@ shareBtn.addEventListener('click', () => {
 
 socialIco.forEach((icon) => {
   icon.addEventListener('click', () => {
-    icon.style.color = 'black'
+  
   })
 })
+
