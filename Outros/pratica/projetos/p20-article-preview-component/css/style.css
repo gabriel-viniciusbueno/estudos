@@ -125,7 +125,7 @@ a{
 
 .share-button a img:hover, .share-button a img.active{
   color: var(--component-color);
-  background: var(--description-color);
+  /* background: var(--description-color); */
 }
 
 .share-option {
@@ -146,6 +146,28 @@ a{
 }
 
 .share-option.active{
-  visibility: visible;
   scale: 1;
+  visibility: visible;
+}
+.share-option::after {
+  content: '';
+  background: var(--headline-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg)
+}
+
+.share-option span{
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--light-gray);
+  margin-right: 5px;
+}
+
+.share-option a img {
+  border-radius: 5px;
 }
