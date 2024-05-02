@@ -1,14 +1,7 @@
-let shareSection = document.querySelector('.share-section')
-let shareBtn = document.querySelector('.share-icon')
-let socialIco = document.querySelectorAll('.social-icon')
+const shareOption = document.querySelector('.share-option')
+const shareButton = document.querySelector('.share-button')
 
-shareBtn.addEventListener('click', () => {
-  shareSection.classList.toggle('active')
+shareButton.addEventListener('click', function() {
+  // this.classList.toggle('active')
+  shareOption.classList.toggle('active')
 })
-
-socialIco.forEach((icon) => {
-  icon.addEventListener('click', () => {
-  
-  })
-})
-
