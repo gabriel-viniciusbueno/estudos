@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62,5%;
+}
+
+body{
+  background-color:rgb(26, 116, 195);
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(40, 135, 250);
+  color: rgb(228, 246, 252);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.363);
+}
+
+header h1{
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.505);
+}
+
+.header-links-container{
+  display: flex;
+  gap: 20px;
+}
+.vault-img{
+  width: 150px;
+}
