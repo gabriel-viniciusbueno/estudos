@@ -5,8 +5,17 @@
   font-size: 62,5%;
 }
 
+@font-face {
+  font-family: 'OverseerItalic';
+  src: url(../font/OverseerItalic-qqV1.ttf);
+  src: local('Overseer'),
+  url(../font/OverseerBoldItalic-AWzp.ttf) format('truetype')
+}
+
+
 body{
   background-color:rgb(26, 116, 195);
+  
 }
 
 header{
@@ -21,6 +30,11 @@ header{
 
 header h1{
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.505);
+  font-family: 'OverseerItalic';
+  font-size: 4rem;
+  color:rgb(245, 208, 42);
+  text-shadow: 2px 1px 0 rgb(0, 0, 0);
+  text-transform: capitalize;
 }
 
 .header-links-container{
