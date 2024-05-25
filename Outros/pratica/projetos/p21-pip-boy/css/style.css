@@ -9,16 +9,26 @@
   font-family: 'OverseerItalic';
   src: url(../font/OverseerItalic-qqV1.ttf);
   src: local('Overseer'),
-  url(../font/OverseerBoldItalic-AWzp.ttf) format('truetype')
+  url(../font/OverseerBoldItalic-AWzp.ttf) format('truetype');
+
+}
+
+@font-face{
+  font-family: 'Monofonto';
+  src: url(../font/monofonto-rg.otf)
 }
 
 
 body{
   background-color:rgb(26, 116, 195);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   
 }
 
 header{
+  /* max-height: 150px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,4 +53,34 @@ header h1{
 }
 .vault-img{
   width: 150px;
+}
+
+.main-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Monofonto';
+
+}
+
+.special-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  /* gap: 15px; */
+  
+}
+
+.special-form input{
+  margin-bottom: 20px;
 }
