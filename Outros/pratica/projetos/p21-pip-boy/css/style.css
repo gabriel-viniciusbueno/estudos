@@ -41,7 +41,7 @@ header{
 header h1{
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.505);
   font-family: 'OverseerItalic';
-  font-size: 4rem;
+  font-size: 3.5rem;
   color:rgb(245, 208, 42);
   text-shadow: 2px 1px 0 rgb(0, 0, 0);
   text-transform: capitalize;
@@ -61,26 +61,47 @@ header h1{
   justify-content: center;
 }
 
-.special-container{
+.pip-boy-container{
+  width: 700px;
+  height: 450px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #fff;
+  background-color: #03280A;
+  color: #16FF42;
   padding: 20px;
   border-radius: 10px;
   font-family: 'Monofonto';
 
 }
 
+.stats{
+  /* mãe do container stats, da aba Special */
+  border: 1px solid green;
+  max-width: 200px;
+}
+
 .special-form{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 200px;
+  gap: 10px;
   flex-direction: column; 
   /* gap: 15px; */
   
 }
 
+.special-form-line{
+  display: flex;
+  justify-content: space-between;
+}
+
 .special-form input{
   margin-bottom: 20px;
+}
+
+.special{
+  /* mãe da aba inteira de special */
+  /* display: none; */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
