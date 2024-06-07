@@ -62,21 +62,22 @@ header h1{
   justify-content: center;
 }
 
+/* pip-boy area */
 .pip-boy-container{
-  width: 700px;
+  max-width: 700px;
   height: 450px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   background-color: #03280A;
   color: #16FF42;
-  padding: 20px;
-  border-radius: 10px;
   font-family: 'Monofonto';
 
 }
 
+
+/* container da página Special */
 .special{
-  /* mãe da aba inteira de special */
   /* display: none; */
   height: 100%; 
   display: grid;
@@ -84,14 +85,16 @@ header h1{
   grid-template-rows: 0fr 1fr;
 }
 
+/* container stats, da aba Special */
 .stats{
+
   height: 100%;
-  /* mãe do container stats, da aba Special */
+  
   /* border: 1px solid rgb(32, 210, 32); */
   max-width: 200px;
   grid-row: span 2;
 }
-.special-form{
+.stats-form{
   height: 100%;
   display: flex;
   max-width: 200px;
@@ -101,31 +104,42 @@ header h1{
   /* gap: 15px; */
   
 }
-.special-form input{
+.stats-form input{
   margin-bottom: 20px;
 }
-.special-form-line{
+.stats-form-line{
   display: flex;
   justify-content: space-between;
 }
 
+
+/* player status values (hp, ap, xp) */
 
 .player-status{
   width: 100%;
   height: 100%;
   /* border: 1px solid rgb(32, 210, 32); */
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  /* justify-content: space-between; */
 }
 
-.special-description{
-  border: 1px solid rgb(32, 210, 32);
-
+.player-status p {
+  display: flex;
+  flex-grow: 1;
+  border-top: 3px solid rgb(32, 210, 32);
+  border-right: 3px solid rgb(32, 210, 32);
 }
+
+.player-value {
+  margin-left: auto;
+}
+
+/* container description */
+
 .special-description{
   border-top: 1px solid red;
 }
-
 
 
 
