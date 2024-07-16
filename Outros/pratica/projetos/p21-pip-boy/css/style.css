@@ -149,7 +149,9 @@ header h1{
 
 .special-description img{
   flex-grow: 1;
-  width: 50%;
+  /* width: 50%; */
+
+  aspect-ratio: 1;
   align-self: center;
   
 }
