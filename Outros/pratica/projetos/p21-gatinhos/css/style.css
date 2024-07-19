@@ -50,7 +50,7 @@ main{
   margin: 20px;
   position: relative;
   
-  border-radius: 0 15px 0 10px;
+  border-radius: 0 25px 0 25px;
   box-shadow: 0 0 15px #00000069;
 }
 
@@ -135,6 +135,43 @@ main{
 .arrow-container > a > i:hover{
   background-color: var(--warm-brown);
   color: var(--background);
+}
+
+.result-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 550px;
+  /* height: 400px; */
+
+  background-color: var(--card);
+  border-radius: 0 25px 0 25px;
+  gap: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.32);
+}
+
+.result-card > h1{
+  font-size: 5rem;
+
+}
+
+.result-description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 20px;
+}
+
+.result-description > h2{
+  font-size: 4rem;
+}
+
+.result-description > p{
+  font-size: 3rem;
 }
 
 .hide{
