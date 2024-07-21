@@ -153,13 +153,13 @@ main{
 
 .result-card > h1{
   font-size: 5rem;
-
 }
 
 .result-description{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   gap: 20px;
 
@@ -179,9 +179,17 @@ main{
   width: 500px;
 }
 
-.rate0 > p {
+.rate0, .rate5, .rate10 > p {
   font-size: 3rem;
   /* display: block; */
+}
+
+.rate5 > .img-container {
+  width: 500px;
+}
+
+.rate10 > .img-container{
+  width: 500px;
 }
 
 .hide{
