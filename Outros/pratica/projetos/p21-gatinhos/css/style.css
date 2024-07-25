@@ -9,7 +9,7 @@
   --background:  #FEFAE0;
   --card: #588b8b;
   --marine: #4a7ba6;
-  --text: #151c0d;
+  --text: #1c0d0d;
   --orange: #F57251;
   --warm-brown: #f79e38;
 
@@ -21,7 +21,7 @@ html{
 }
 
 body{
-  font-family: 'Amatic';
+  font-family: 'Zain';
   background-color: var(--background);
   height: 100%;
 }
@@ -102,21 +102,27 @@ main{
   text-align: center;
   font-size: 2.5rem;
   font-family: 'Amatic';
+  background-color: var(--background);
+  color: var(--card);
+  
+  font-family: 'Montserrat';
+  font-weight: bold;
 
   cursor: pointer;
   text-decoration: none;
   border: hidden;
-  transition: .3s ease;
+  transition: .3s;
 }
 
 .btn-container input:hover{
+  transition: .3s;
   background-color: var(--warm-brown);
   color: var(--background);
-  box-shadow: 0 0 3px var(--background)
+  box-shadow: 0 0 5px #fefae081;
 }
 
 .arrow-container{
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -179,7 +185,9 @@ main{
   width: 500px;
 }
 
-.rate0, .rate5, .rate10 > p {
+.rate0 > p,
+.rate5 > p,
+.rate10 > p {
   font-size: 3rem;
   /* display: block; */
 }
