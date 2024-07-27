@@ -55,6 +55,7 @@ main{
 }
 
 .main-container #title{
+  color: var(--background);
   font-size: 3rem;
 }
 
@@ -99,12 +100,9 @@ main{
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+
   text-align: center;
   font-size: 2.5rem;
-  font-family: 'Amatic';
-  background-color: var(--background);
-  color: var(--card);
-  
   font-family: 'Montserrat';
   font-weight: bold;
 
@@ -114,11 +112,17 @@ main{
   transition: .3s;
 }
 
+.non-selected{
+  background-color: var(--background);
+  color: var(--card);
+}
+
 .btn-container input:hover{
   transition: .3s;
   background-color: var(--warm-brown);
   color: var(--background);
   box-shadow: 0 0 5px #fefae081;
+  scale: 1.04;
 }
 
 .arrow-container{
@@ -131,11 +135,11 @@ main{
 .arrow-container > a > i {
   text-decoration: none;
   border: none;
-  font-size: 4rem;
+  font-size: 3.5rem;
   background-color: var(--background);
   color: var(--card);
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 1rem;
   transition: .3s ease;
 }
 .arrow-container > a > i:hover{
@@ -200,7 +204,26 @@ main{
   width: 500px;
 }
 
+.selected{
+  color: var(--background);
+  background-color: var(--warm-brown);
+  box-shadow: 0 0 5px #fefae081 ;
+  scale: 1.04;
+}
+
 .hide{
+  /* transition: 3s; */
+  opacity: 0;
   display: none;
+  visibility: hidden;
+}
+
+.hide-img{
+  transition: .3s;
+  opacity: 0;
+}
+
+.hide-btn{
+  /* display: none; */
   visibility: hidden;
 }

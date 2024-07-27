@@ -1,5 +1,21 @@
-import module;
-const button = document.querySelectorAll('.button');
+// import module;
+const buttons = document.querySelectorAll('.btn-container .button');
+const arrow = document.querySelectorAll('.arrow-container a');
+
+arrow.forEach((a) => a.addEventListener('click', () => {
+  console.log('clicado!')
+})
+)
+buttons.forEach((btn) => btn.addEventListener('click', () => {
+  btn.classList.toggle('non-selected');
+  btn.classList.toggle('selected');
+})
+)
+
+//pegar os botões das notas
+//pegar os botões de  avançar
+// criar uma variavel igual a 0 que acompanha o numero da foto
+//criar um array para armazenar as notas. se avançar, a nota é armazenada no array. se voltar, a ultima nota do array é apagada.
 
 // button.forEach((btn) => {
 //   btn.addEventListener('click', () => {
