@@ -2,13 +2,34 @@
 const buttons = document.querySelectorAll('.btn-container .button');
 const arrow = document.querySelectorAll('.arrow-container a');
 
-arrow.forEach((a) => a.addEventListener('click', () => {
-  console.log('clicado!')
-})
-)
+let rate
+let ratesArr = [];
+
+function verification () {
+  buttons.forEach((btn) => {
+    btn.classList.remove('selected');
+    btn.classList.add('non-selected');
+  }
+  )}
+
+
 buttons.forEach((btn) => btn.addEventListener('click', () => {
+
+  verification();
+  rate = btn.value; // inserir no array quando avançar para a proxima foto
   btn.classList.toggle('non-selected');
   btn.classList.toggle('selected');
+
+})
+)
+
+arrow.forEach((a) => a.addEventListener('click', () => {
+  console.log('clicado!')
+
+  // mudar a foto
+  // zerar os rate
+  // adicionar o botão de voltar
+  
 })
 )
 
