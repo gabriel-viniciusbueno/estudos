@@ -132,6 +132,10 @@ main{
   justify-content: space-between;
 }
 
+.arrow-container > a {
+  border-radius: 50%;
+}
+
 .arrow-container > a > i {
   text-decoration: none;
   border: none;

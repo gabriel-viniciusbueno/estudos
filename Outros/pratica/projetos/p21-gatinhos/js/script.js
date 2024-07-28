@@ -25,16 +25,28 @@ buttons.forEach((btn) => btn.addEventListener('click', () => {
 })
 )
 
+function checkPictureId() {
+  console.log('nao pegou')
+  if(pictureId >= 2){
+    const arrowIco = document.getElementById('prev-arrow-ico');
+    arrowIco.classList.remove('hide-btn')
+  } else {
+    arrowIco.classList.add('hide-btn')
+  }
+}
+
 arrowPrev.addEventListener('click', () => {
   console.log('aoba')
 })
 
 arrowNext.addEventListener('click', () => {
   pictureId++;
+  checkPictureId()
   rate = 0;
   const picture = document.querySelector('.img-container img');
   picture.src = `./assets/animal${pictureId}.jpg`;
-  console.log('clicado!')
+
+  console.log(pictureId)
 
   // mudar a foto
   // zerar os rate
