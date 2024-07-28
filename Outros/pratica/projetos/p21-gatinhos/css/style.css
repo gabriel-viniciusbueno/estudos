@@ -112,11 +112,6 @@ main{
   transition: .3s;
 }
 
-.non-selected{
-  background-color: var(--background);
-  color: var(--card);
-}
-
 .btn-container input:hover{
   transition: .3s;
   background-color: var(--warm-brown);
@@ -207,6 +202,12 @@ main{
 .rate10 > .img-container{
   width: 500px;
 }
+
+.non-selected{
+  background-color: var(--background);
+  color: var(--card);
+}
+
 
 .selected{
   color: var(--background);

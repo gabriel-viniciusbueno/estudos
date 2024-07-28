@@ -11,8 +11,33 @@ function verification () {
   buttons.forEach((btn) => {
     btn.classList.remove('selected');
     btn.classList.add('non-selected');
+}
+)}
+
+function checkRate(rate){
+  if(rate){
+    ratesArr.push(rate);
+  } else{
+    return
   }
-  )}
+}
+
+function resetButton(){
+  buttons.forEach((btn) => {
+    btn.classList.remove('selected');
+    btn.classList.add('non-selected');
+  })
+}
+
+function showPrevArrow() {
+  if(pictureId >= 2){
+    const arrowIco = document.getElementById('prev-arrow-ico');
+    arrowIco.classList.remove('hide-btn')
+  } else {
+    arrowIco.classList.add('hide-btn')
+  }
+}
+
 
 
 buttons.forEach((btn) => btn.addEventListener('click', () => {
@@ -25,29 +50,25 @@ buttons.forEach((btn) => btn.addEventListener('click', () => {
 })
 )
 
-function checkPictureId() {
-  console.log('nao pegou')
-  if(pictureId >= 2){
-    const arrowIco = document.getElementById('prev-arrow-ico');
-    arrowIco.classList.remove('hide-btn')
-  } else {
-    arrowIco.classList.add('hide-btn')
-  }
-}
-
 arrowPrev.addEventListener('click', () => {
   console.log('aoba')
 })
 
 arrowNext.addEventListener('click', () => {
+
   pictureId++;
-  checkPictureId()
-  rate = 0;
   const picture = document.querySelector('.img-container img');
   picture.src = `./assets/animal${pictureId}.jpg`;
 
-  console.log(pictureId)
+  checkRate(rate)
+  showPrevArrow()
+  resetButton()
 
+
+  
+  console.log(rate)
+  console.log(ratesArr)
+  rate = 0;
   // mudar a foto
   // zerar os rate
   // adicionar o botão de voltar
