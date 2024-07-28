@@ -67,14 +67,18 @@ arrowNext.addEventListener('click', () => {
 
   rate = 0;
 
-  console.log(pictureId)
+  console.log(ratesArr)
 })
 
 arrowPrev.addEventListener('click', () => {
   pictureId--
   showPrevArrow()
   changePicture()
-  console.log(pictureId)
+
+  ratesArr.pop()
+  console.log(ratesArr)
+
+  
 
 })
 
