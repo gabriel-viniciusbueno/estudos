@@ -30,7 +30,8 @@ arrowPrev.addEventListener('click', () => {
 })
 
 arrowNext.addEventListener('click', () => {
-  pictureId++
+  pictureId++;
+  rate = 0;
   const picture = document.querySelector('.img-container img');
   picture.src = `./assets/animal${pictureId}.jpg`;
   console.log('clicado!')
