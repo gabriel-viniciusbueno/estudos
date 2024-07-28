@@ -14,11 +14,19 @@ function verification () {
 }
 )}
 
+function changePicture() {
+  const picture = document.querySelector('.img-container img');
+  picture.src = `./assets/animal${pictureId}.jpg`;
+}
+
+
 function checkRate(rate){
-  if(rate){
+
+  if(rate > 0){
+    changePicture()
     ratesArr.push(rate);
   } else{
-    return
+    console.log('erro ae bixo kkkk')
   }
 }
 
@@ -34,6 +42,7 @@ function showPrevArrow() {
     const arrowIco = document.getElementById('prev-arrow-ico');
     arrowIco.classList.remove('hide-btn')
   } else {
+    const arrowIco = document.getElementById('prev-arrow-ico');
     arrowIco.classList.add('hide-btn')
   }
 }
@@ -43,39 +52,33 @@ function showPrevArrow() {
 buttons.forEach((btn) => btn.addEventListener('click', () => {
 
   verification();
-  rate = btn.value; // inserir no array quando avançar para a proxima foto
+  rate = parseInt(btn.value);
   btn.classList.toggle('non-selected');
   btn.classList.toggle('selected');
 
 })
 )
 
-arrowPrev.addEventListener('click', () => {
-  console.log('aoba')
-})
-
 arrowNext.addEventListener('click', () => {
-
-  pictureId++;
-  const picture = document.querySelector('.img-container img');
-  picture.src = `./assets/animal${pictureId}.jpg`;
-
+  pictureId++
   checkRate(rate)
   showPrevArrow()
   resetButton()
 
-
-  
-  console.log(rate)
-  console.log(ratesArr)
   rate = 0;
-  // mudar a foto
-  // zerar os rate
-  // adicionar o botão de voltar
-  // impedir o usuário de avançar sem dar uma nota
-  //verificar se tem algum select nos rates, se tiver pode avançar
+
+  console.log(pictureId)
+})
+
+arrowPrev.addEventListener('click', () => {
+  pictureId--
+  showPrevArrow()
+  changePicture()
+  console.log(pictureId)
 
 })
+
+// Mostrar uma mensgaem de erro ao não escolher uma nota
 
 //fazer pictureId reduzir 1 quando voltarmos
 //Apagar o último elemento do array
