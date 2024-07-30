@@ -78,20 +78,12 @@ arrowPrev.addEventListener('click', () => {
   ratesArr.pop()
   console.log(ratesArr)
 
-  
-
 })
 
+// fazer tela de erro
+// fazer a tela de resultados
+
 // Mostrar uma mensgaem de erro ao não escolher uma nota
-
-//fazer pictureId reduzir 1 quando voltarmos
-//Apagar o último elemento do array
-//voltar à foto anterior
-
-//criar um array para armazenar as notas. se avançar, a nota é armazenada no array. se voltar, a ultima nota do array é apagada.
-
-// <!-- a ideia é usar template literals para mudar a foto exibida -->
-// armazenar o valor dos rates em um array e apenas retornar quando o quiz estiver encerrado. retirar o último valor do array caso o usuário queira voltar e refazer seus ratings
 
 // arquivo de variáveis
 // aplicar modules
