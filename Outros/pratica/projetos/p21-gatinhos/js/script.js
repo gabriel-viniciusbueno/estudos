@@ -4,7 +4,7 @@ const arrowPrev = document.getElementById('prev-arrow');
 const arrowNext = document.getElementById('next-arrow');
 
 let pictureId = 1;
-let rate
+let rate = 0
 let ratesArr = [];
 
 function verification () {
@@ -21,13 +21,8 @@ function changePicture() {
 
 
 function checkRate(rate){
-
-  if(rate > 0){
     changePicture()
     ratesArr.push(rate);
-  } else{
-    console.log('erro ae bixo kkkk')
-  }
 }
 
 function resetButton(){
@@ -55,18 +50,23 @@ buttons.forEach((btn) => btn.addEventListener('click', () => {
   rate = parseInt(btn.value);
   btn.classList.toggle('non-selected');
   btn.classList.toggle('selected');
-
+  console.log(rate)
 })
 )
 
 arrowNext.addEventListener('click', () => {
-  pictureId++
-  checkRate(rate)
+
+  if(rate > 0) {
+    pictureId++
+    checkRate(rate)
+  }else {
+      //Mostrar erro e dar
+    return
+  }
   showPrevArrow()
   resetButton()
 
   rate = 0;
-
   console.log(ratesArr)
 })
 
