@@ -2,7 +2,7 @@
 const buttons = document.querySelectorAll('.btn-container .button');
 const arrowPrev = document.getElementById('prev-arrow');
 const arrowNext = document.getElementById('next-arrow');
-
+const errorModalBtn = document.getElementById('x-icon');
 let pictureId = 1;
 let rate = 0
 let ratesArr = [];
@@ -42,7 +42,13 @@ function showPrevArrow() {
   }
 }
 
+function toggleErrorModal(){
+  const opacity = document.querySelector('.main-opacity');
+  const errorModal = document.querySelector('.error-container');
 
+  opacity.classList.toggle('hide');
+  errorModal.classList.toggle('hide');
+}
 
 buttons.forEach((btn) => btn.addEventListener('click', () => {
 
@@ -60,7 +66,7 @@ arrowNext.addEventListener('click', () => {
     pictureId++
     checkRate(rate)
   }else {
-      //Mostrar erro e dar
+      toggleErrorModal()
     return
   }
   showPrevArrow()
@@ -79,11 +85,11 @@ arrowPrev.addEventListener('click', () => {
   console.log(ratesArr)
 
 })
+console.log(errorModalBtn)
+errorModalBtn.addEventListener('click', toggleErrorModal)
 
-// fazer tela de erro
-// fazer a tela de resultados
 
-// Mostrar uma mensgaem de erro ao não escolher uma nota
+//quando imageID chegar em 16, encerrar o jogo e mostrar a tela de resultado
+// calcular o resultado
 
-// arquivo de variáveis
 // aplicar modules
