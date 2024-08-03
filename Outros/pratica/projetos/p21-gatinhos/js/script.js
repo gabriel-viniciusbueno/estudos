@@ -23,11 +23,18 @@ function changePicture() {
 }
 
 function checkRate(rate){
+  if(rate != 0) {
+    pictureId++
     changePicture()
     ratesArr.push(rate);
+  }else {
+    toggleErrorModal()
+    return
+  }
 }
 
 function toggleErrorModal(){
+  console.log("chamou")
   const opacity = document.querySelector('.main-opacity');
   const errorModal = document.querySelector('.error-container');
 
@@ -52,7 +59,7 @@ function togglePrevArrow() {
   }
 }
 
-function showFinishBtn() {
+function toggleFinishBtn() {
   if(pictureId >= 15){
     arrowNext.classList.toggle('hide');
     finishBtn.classList.toggle('hide');
@@ -75,19 +82,13 @@ buttons.forEach((btn) => btn.addEventListener('click', () => {
 )
 
 arrowNext.addEventListener('click', () => {
+  checkRate(rate)
 
-  if(rate > 0) {
-    pictureId++
-    checkRate(rate)
-  }else {
-      toggleErrorModal()
-    return
-  }
   togglePrevArrow()
   resetButton()
 
   rate = 0;
-  showFinishBtn()
+  toggleFinishBtn()
   console.log(ratesArr)
   console.log(pictureId)
 })
@@ -101,11 +102,21 @@ arrowPrev.addEventListener('click', () => {
   console.log(ratesArr)
 
 })
-console.log(errorModalBtn)
 
 errorModalBtn.addEventListener('click', toggleErrorModal)
 
-finishBtn.addEventListener('click')
+finishBtn.addEventListener('click', () => {
+  checkRate(rate);
+  console.log(ratesArr);
+
+  const resultScreen = document.querySelector('.result-card');
+  const mainContainer = document.querySelector('.main-container')
+
+  if(pictureId > 15){
+    mainContainer.classList.add('hide');
+    resultScreen.classList.remove('hide');
+  }
+})
 
 
 //quando imageID chegar em 16, encerrar o jogo e mostrar a tela de resultado
