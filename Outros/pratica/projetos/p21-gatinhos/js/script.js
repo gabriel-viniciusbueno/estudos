@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll('.btn-container .button');
 const arrowPrev = document.getElementById('prev-arrow');
 const arrowNext = document.getElementById('next-arrow');
 const errorModalBtn = document.getElementById('x-icon');
+const finishBtn = document.querySelector('.finish');
 let pictureId = 13;
 let rate = 0
 let ratesArr = [];
@@ -21,10 +22,17 @@ function changePicture() {
   }
 }
 
-
 function checkRate(rate){
     changePicture()
     ratesArr.push(rate);
+}
+
+function toggleErrorModal(){
+  const opacity = document.querySelector('.main-opacity');
+  const errorModal = document.querySelector('.error-container');
+
+  opacity.classList.toggle('hide');
+  errorModal.classList.toggle('hide');
 }
 
 function resetButton(){
@@ -44,23 +52,17 @@ function togglePrevArrow() {
   }
 }
 
-function finalizeApp() {
+function showFinishBtn() {
   if(pictureId >= 15){
     arrowNext.classList.toggle('hide');
-    const finishBtn = document.querySelector('');
-    finish
+    finishBtn.classList.toggle('hide');
   }
-
-  //msotrar tela de resultado
 }
 
-function toggleErrorModal(){
-  const opacity = document.querySelector('.main-opacity');
-  const errorModal = document.querySelector('.error-container');
+function finalResult(){
 
-  opacity.classList.toggle('hide');
-  errorModal.classList.toggle('hide');
 }
+
 
 buttons.forEach((btn) => btn.addEventListener('click', () => {
 
@@ -85,7 +87,7 @@ arrowNext.addEventListener('click', () => {
   resetButton()
 
   rate = 0;
-  finalizeApp()
+  showFinishBtn()
   console.log(ratesArr)
   console.log(pictureId)
 })
@@ -100,7 +102,10 @@ arrowPrev.addEventListener('click', () => {
 
 })
 console.log(errorModalBtn)
+
 errorModalBtn.addEventListener('click', toggleErrorModal)
+
+finishBtn.addEventListener('click')
 
 
 //quando imageID chegar em 16, encerrar o jogo e mostrar a tela de resultado

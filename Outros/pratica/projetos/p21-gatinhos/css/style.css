@@ -167,25 +167,31 @@ main{
 }
 
 .button{
+  border-radius: 50%;
+}
+.icon,
+.finish{
+  color: var(--card);
+  background-color: var(--background);
   font-size: 3rem;
   font-weight: bold;
-  color: var(--card);
   text-decoration: none;
   text-transform: uppercase;
-  background-color: var(--background);
   align-content: center;
-  padding: 1rem;
   transition: .3s ease;
 }
 
-/* criar uma classe para todos os botoes, entao criar uma para cada */
-.button > i {
-  color: var(--card);
-    background-color: var(--background);
-    font-size: 3.5rem;
-    border-radius: 50%;
+.icon{
+  padding: 1rem;
+  border-radius: 50%;
 }
-.button:hover{
+
+.finish{
+  padding: 0 1rem;
+}
+
+.finish:hover,
+.icon:hover{
   background-color: var(--warm-brown);
   color: var(--background);
 }
