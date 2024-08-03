@@ -46,7 +46,7 @@ function togglePrevArrow() {
 
 function finalizeApp() {
   if(pictureId >= 15){
-    arrowNext.classList.toggle('hide')
+    arrowNext.classList.toggle('hide');
     const finishBtn = document.querySelector('');
     finish
   }
