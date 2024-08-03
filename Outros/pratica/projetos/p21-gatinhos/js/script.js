@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('.btn-container .button');
 const arrowPrev = document.getElementById('prev-arrow');
 const arrowNext = document.getElementById('next-arrow');
 const errorModalBtn = document.getElementById('x-icon');
-let pictureId = 1;
+let pictureId = 13;
 let rate = 0
 let ratesArr = [];
 
@@ -15,8 +15,10 @@ function verification () {
 )}
 
 function changePicture() {
-  const picture = document.querySelector('.img-container img');
-  picture.src = `./assets/animal${pictureId}.jpg`;
+  if(pictureId <= 15){
+    const picture = document.querySelector('.img-container img');
+    picture.src = `./assets/animal${pictureId}.jpg`;
+  }
 }
 
 
@@ -32,14 +34,24 @@ function resetButton(){
   })
 }
 
-function showPrevArrow() {
+function togglePrevArrow() {
   if(pictureId >= 2){
     const arrowIco = document.getElementById('prev-arrow-ico');
-    arrowIco.classList.remove('hide-btn')
+    arrowIco.classList.remove('hide')
   } else {
     const arrowIco = document.getElementById('prev-arrow-ico');
-    arrowIco.classList.add('hide-btn')
+    arrowIco.classList.add('hide')
   }
+}
+
+function finalizeApp() {
+  if(pictureId >= 15){
+    arrowNext.classList.toggle('hide')
+    const finishBtn = document.querySelector('');
+    finish
+  }
+
+  //msotrar tela de resultado
 }
 
 function toggleErrorModal(){
@@ -69,16 +81,18 @@ arrowNext.addEventListener('click', () => {
       toggleErrorModal()
     return
   }
-  showPrevArrow()
+  togglePrevArrow()
   resetButton()
 
   rate = 0;
+  finalizeApp()
   console.log(ratesArr)
+  console.log(pictureId)
 })
 
 arrowPrev.addEventListener('click', () => {
   pictureId--
-  showPrevArrow()
+  togglePrevArrow()
   changePicture()
 
   ratesArr.pop()
