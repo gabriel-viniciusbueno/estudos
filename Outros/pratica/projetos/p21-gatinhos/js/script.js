@@ -116,10 +116,23 @@ finishBtn.addEventListener('click', () => {
     mainContainer.classList.add('hide');
     resultScreen.classList.remove('hide');
   }
+
+  // for(let i = 0; i < ratesArr.length; i++){
+  //   finalRate += ratesArr[i];
+  // }
+  let finalRate = ratesArr.reduce((value, rate) => {
+    return value + rate;
+  }, 0)
+
+  finalRate *= 2 / ratesArr.length;
+
+  console.log(finalRate)
+
+  //com o valor final da nota, mostrar a foto e a pontuação do usuario
+  //talvez definir o resultado com switch case 
+
+  //mostrar no texto quanto foi a nota em cada caso
 })
 
-
-//quando imageID chegar em 16, encerrar o jogo e mostrar a tela de resultado
-// calcular o resultado
 
 // aplicar modules
