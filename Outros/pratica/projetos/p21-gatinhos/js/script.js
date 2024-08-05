@@ -4,7 +4,7 @@ const arrowPrev = document.getElementById('prev-arrow');
 const arrowNext = document.getElementById('next-arrow');
 const errorModalBtn = document.getElementById('x-icon');
 const finishBtn = document.querySelector('.finish');
-let pictureId = 13;
+let pictureId = 1;
 let rate = 0
 let ratesArr = [];
 
@@ -94,6 +94,7 @@ arrowNext.addEventListener('click', () => {
 })
 
 arrowPrev.addEventListener('click', () => {
+  verification()
   pictureId--
   togglePrevArrow()
   changePicture()
@@ -126,7 +127,27 @@ finishBtn.addEventListener('click', () => {
 
   finalRate *= 2 / ratesArr.length;
 
-  console.log(finalRate)
+  
+
+  const resultSpan = document.querySelector('.result-card h2 span');
+  resultSpan.innerHTML = finalRate.toFixed(1)
+
+
+
+ // Refatorar
+  if(finalRate <= 3){
+    const resultModal = document.querySelector('.rate1');
+    resultModal.classList.toggle('hide')
+  } else if(finalRate <= 8){
+    const resultModal = document.querySelector('.rate2');
+    resultModal.classList.toggle('hide')
+  } else {
+    const resultModal = document.querySelector('.rate3');
+    resultModal.classList.toggle('hide')
+  }
+
+
+
 
   //com o valor final da nota, mostrar a foto e a pontuação do usuario
   //talvez definir o resultado com switch case 
