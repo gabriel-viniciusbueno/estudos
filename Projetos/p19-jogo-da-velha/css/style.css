@@ -8,6 +8,12 @@
 :root{
   font-family: 'Poppins';
   font-size: 62.5%;
+
+  --background: #7678ed;
+  --header: #3d348b;
+  --yellow: #F7B801;
+  --orange: #F18701;
+  --persimmon: #F35B04;
 }
 
 body{
@@ -15,5 +21,28 @@ body{
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 10% 85% 5%;
+
+  background-color: var(--background);
+}
+
+header{
+  background-color: var(--header);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+  color: #FFF;
+}
+
+main{
+  align-self: center;
+  justify-self: center;
+  background-color: var(--orange);
+}
+
+.name-container{
+  background-color: var(--persimmon);
+}
+
+footer{
+  background-color: #222222;
+  color: #FFF;
 }
