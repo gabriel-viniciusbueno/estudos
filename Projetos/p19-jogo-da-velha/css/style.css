@@ -26,7 +26,7 @@ body{
   grid-template-rows: 10% 85% 5%;
 
   background-color: var(--background);
-  background-image: linear-gradient(to bottom, var(--background), #9fa1fc);
+  background-image: linear-gradient(to bottom right, var(--background), #8b8cec);
 }
 
 header{
@@ -96,9 +96,9 @@ main{
   margin-top: 20px;
   max-width: 60%;
   
-  border: 2px solid #fff;
-  background-color: var(--header);
-  color: #fff;
+  border: 2px solid var(--text);
+  background-color: var(--background);
+  color: var(--text);
 
   font-size: 2rem;
   text-transform: uppercase;
@@ -106,7 +106,9 @@ main{
 }
 
 .name-container .start-btn:hover{
-  
+  background-color: var(--header);
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 
