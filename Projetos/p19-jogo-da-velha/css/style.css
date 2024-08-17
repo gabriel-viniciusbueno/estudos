@@ -1,4 +1,5 @@
 /* raleway para botões, */
+/* botoes com cor persimmon */
 *{
   padding: 0;
   margin: 0;
@@ -11,6 +12,7 @@
 
   --background: #7678ed;
   --header: #3d348b;
+  --text: #251d6b;
   --yellow: #F7B801;
   --orange: #F18701;
   --persimmon: #F35B04;
@@ -24,25 +26,103 @@ body{
   grid-template-rows: 10% 85% 5%;
 
   background-color: var(--background);
+  background-image: linear-gradient(to bottom, var(--background), #9fa1fc);
 }
 
 header{
   background-color: var(--header);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
   color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title{
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: var(--yellow)
 }
 
 main{
   align-self: center;
   justify-self: center;
-  background-color: var(--orange);
+  /* background-color: var(--orange); */
 }
 
 .name-container{
-  background-color: var(--persimmon);
+  background-color: var(--yellow);
+  font-size: 1.5rem;
+  color: var(--text);
+
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #2222224d;
+
+  display: grid;
+  gap: 10px;
+  justify-items: center;
 }
+
+.name-container > h2{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.name-container label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.name-container input {
+  width: 100%;
+
+  padding: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  outline: none;
+  border: 2px solid var(--header);
+
+  transition: .2s;
+}
+.name-container input:focus{
+  background-color: var(--background);
+  color: #fff;
+}
+
+.name-container .start-btn{
+  margin-top: 20px;
+  max-width: 60%;
+  
+  border: 2px solid #fff;
+  background-color: var(--header);
+  color: #fff;
+
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.name-container .start-btn:hover{
+  
+}
+
+
 
 footer{
   background-color: #222222;
+}
+
+footer a{
   color: #FFF;
+  font-size: 1.5rem;
+}
+
+
+.hide{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }

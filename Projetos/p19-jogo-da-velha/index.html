@@ -16,20 +16,22 @@
 </head>
 <body>
   <header>
-    <h1>Tic-tac-toe Game</h1>
+    <h1 id="title">Tic-tac-toe Game</h1>
   </header>
 
   <main>
     <!-- players modal -->
 
     <section class="name-container">
+      <h2>Defina o nome dos jogadores</h2>
       <label for="name1">Jogador 1:</label>
       <input type="text" id="name1">
       <label for="name2">Jogador 2:</label>
       <input type="text" id="name2">
+      <input type="button" class="start-btn " value="Start">
     </section>
 
-    <section class="game-table">
+    <section class="game-table hide">
       <!-- criar o elemento HTML i e adicionar na div com appendChild -->
       <i class="fa-solid fa-xmark"></i>
       <i class="fa-regular fa-circle"></i>
@@ -45,7 +47,7 @@
     </section>
 
     <!-- winner modal -->
-    <section>
+    <section class="winner-modal hide">
       <h2>Player</h2>
       <p>has won the match!</p>
       <input type="button" value="Play Again">
