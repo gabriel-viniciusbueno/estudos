@@ -45,10 +45,11 @@ header{
 }
 
 main{
-  align-self: center;
-  justify-self: center;
-  /* background-color: var(--orange); */
+  width: 100%;
+  height: 100%;
+  place-content: center;
 }
+
 
 .name-container{
   background-color: var(--yellow);
@@ -111,7 +112,41 @@ main{
   border: 2px solid #fff;
 }
 
+.game-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
+.game-table{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cells{
+  min-width: 150px;
+  min-height: 150px;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* css do players turn */
+
+/* usar .icon ou > i */
+.cells .icon{
+  /* font-size: 3rem; */
+}
+.cells > i{
+  font-size: 7rem;
+}
+
+/* modal do vencerdor */
 
 footer{
   background-color: #222222;

@@ -31,19 +31,26 @@
       <input type="button" class="start-btn " value="Start">
     </section>
 
-    <section class="game-table ">
+    <section class="game-container ">
+      <h2><span>Player's</span> turn!</h2>
       <!-- criar o elemento HTML i e adicionar na div com appendChild -->
-      <i class="fa-solid fa-xmark"></i>
-      <i class="fa-regular fa-circle"></i>
-      <div data-index-cell="0" class="cells"></div>
-      <div data-index-cell="1" class="cells"></div>
-      <div data-index-cell="2" class="cells"></div>
-      <div data-index-cell="3" class="cells"></div>
-      <div data-index-cell="4" class="cells"></div>
-      <div data-index-cell="5" class="cells"></div>
-      <div data-index-cell="6" class="cells"></div>
-      <div data-index-cell="7" class="cells"></div>
-      <div data-index-cell="8" class="cells"></div>
+      <!-- <i class="fa-solid fa-xmark"></i> -->
+      <!-- <i class="fa-regular fa-circle"></i> -->
+      <div class="game-table">
+        <div data-index-cell="0" class="cells">
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <div data-index-cell="1" class="cells">
+          x
+        </div>
+        <div data-index-cell="2" class="cells">o</div>
+        <div data-index-cell="3" class="cells">x</div>
+        <div data-index-cell="4" class="cells">x</div>
+        <div data-index-cell="5" class="cells">o</div>
+        <div data-index-cell="6" class="cells">x</div>
+        <div data-index-cell="7" class="cells">o</div>
+        <div data-index-cell="8" class="cells">x</div>
+      </div>
     </section>
 
     <!-- winner modal -->
