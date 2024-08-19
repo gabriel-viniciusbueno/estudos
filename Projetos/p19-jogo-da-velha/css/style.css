@@ -10,7 +10,6 @@
   font-family: 'Poppins';
   font-size: 62.5%;
 
-  /* --background: #7678ed; */
   --background: #221b61;
   --background-cells: #201142;
   --header:#442e92 ;
@@ -45,6 +44,7 @@ header{
   font-size: 3.5rem;
   text-transform: capitalize;
   color: var(--yellow);
+  text-shadow: 3px 0 3px var(--background-cells);
 }
 
 main{
@@ -65,18 +65,23 @@ main{
   gap: 20px;
 
   font-size: 1.5rem;
-  color: var(--background-cells);
+  color: var(--yellow);
   background-color: var(--violet);
 
   padding: 20px;
   box-shadow: 0 0 20px var(--background-cells);
+  border-radius: 3px;
 
 }
 
 .name-container > h2{
   margin-bottom: 20px;
   text-align: center;
+  text-transform: uppercase;
+  color: var(--background-cells)
 }
+
+/* criar duas classes de cores diferentes para os players 1 e 2 */
 
 .name-container label {
   font-size: 2rem;
@@ -94,7 +99,7 @@ main{
   outline: none;
   border: 2px solid var(--header);
 
-  transition: .2s;
+  transition: .3s;
 }
 .name-container input:focus{
   background-color: var(--background);
@@ -105,9 +110,9 @@ main{
   margin-top: 20px;
   max-width: 60%;
   
-  border: 2px solid var(--blue);
+  border: 2px solid var(--yellow);
   background-color: var(--background);
-  color: var(--blue);
+  color: var(--yellow);
 
   font-size: 2rem;
   text-transform: uppercase;
@@ -115,9 +120,9 @@ main{
 }
 
 .name-container .start-btn:hover{
-  background-color: var(--header);
-  color: #fff;
-  border: 2px solid #fff;
+  background-color: var(--background-cells);
+  color: var(--blue);
+  border: 2px solid var(--blue);
 }
 
 .game-container{
