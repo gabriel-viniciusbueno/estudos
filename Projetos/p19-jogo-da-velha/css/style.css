@@ -10,11 +10,13 @@
   font-family: 'Poppins';
   font-size: 62.5%;
 
-  --background: #7678ed;
-  --header: #3d348b;
-  --text: #251d6b;
-  --yellow: #F7B801;
-  --orange: #F18701;
+  /* --background: #7678ed; */
+  --background: #221b61;
+  --background-cells: #201142;
+  --header:#442e92 ;
+  --violet: #6153e0;
+  --blue: #1abaeb;
+  --yellow: #ffcf40;
   --persimmon: #F35B04;
 }
 
@@ -26,12 +28,13 @@ body{
   grid-template-rows: 10% 85% 5%;
 
   background-color: var(--background);
-  background-image: linear-gradient(to bottom right, var(--background), #8b8cec);
+  /* background-image: linear-gradient(to bottom right, var(--background), #8b8cec); */
 }
 
 header{
   background-color: var(--header);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+  box-shadow: 0 0 10px var(--background-cells);
+  /* box-shadow: 0 0 20px var(--orange); */
   color: #FFF;
   display: flex;
   align-items: center;
@@ -41,29 +44,33 @@ header{
 #title{
   font-size: 3.5rem;
   text-transform: capitalize;
-  color: var(--yellow)
+  color: var(--yellow);
 }
 
 main{
+  display: flex;
   width: 100%;
   height: 100%;
   place-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .name-container{
-  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px;
+
   font-size: 1.5rem;
-  color: var(--text);
+  color: var(--background-cells);
+  background-color: var(--violet);
 
-  margin: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px #2222224d;
+  padding: 20px;
+  box-shadow: 0 0 20px var(--background-cells);
 
-  display: grid;
-  gap: 10px;
-  justify-items: center;
 }
 
 .name-container > h2{
@@ -82,6 +89,7 @@ main{
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+  color: var(--background-cells);
 
   outline: none;
   border: 2px solid var(--header);
@@ -97,9 +105,9 @@ main{
   margin-top: 20px;
   max-width: 60%;
   
-  border: 2px solid var(--text);
+  border: 2px solid var(--blue);
   background-color: var(--background);
-  color: var(--text);
+  color: var(--blue);
 
   font-size: 2rem;
   text-transform: uppercase;
@@ -121,22 +129,39 @@ main{
   gap: 20px;
 }
 
+.game-container h2{
+  font-size: 3rem;
+  color: var(--header);
+}
+
+.span-player1{
+  color: var(--blue);
+}
+
+.span-player2{
+  color: var(--yellow);
+}
+
 .game-table{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
 }
 
 .cells{
-  min-width: 150px;
-  min-height: 150px;
-  border: 1px solid black;
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 10px;
+
+  background-color: var(--background);
+  color: var(--blue);
+  border: 2px solid var(--header);
 }
-/* css do players turn */
 
 /* usar .icon ou > i */
 .cells .icon{
@@ -149,7 +174,7 @@ main{
 /* modal do vencerdor */
 
 footer{
-  background-color: #222222;
+  background-color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
