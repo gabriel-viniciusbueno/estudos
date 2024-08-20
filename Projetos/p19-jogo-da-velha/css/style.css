@@ -1,5 +1,3 @@
-/* raleway para botões, */
-/* botoes com cor persimmon */
 *{
   padding: 0;
   margin: 0;
@@ -27,13 +25,11 @@ body{
   grid-template-rows: 10% 85% 5%;
 
   background-color: var(--background);
-  /* background-image: linear-gradient(to bottom right, var(--background), #8b8cec); */
 }
 
 header{
   background-color: var(--header);
   box-shadow: 0 0 10px var(--background-cells);
-  /* box-shadow: 0 0 20px var(--orange); */
   color: #FFF;
   display: flex;
   align-items: center;
@@ -136,20 +132,20 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
 .game-container h2{
   font-size: 3rem;
-  color: var(--violet);
+  color: #fff;
 }
 
-.span-player1{
+.circle-color{
   color: var(--blue);
 }
 
-.span-player2{
+.x-color{
   color: var(--yellow);
 }
 
@@ -164,8 +160,8 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 150px;
-  min-height: 150px;
+  width: 100%;
+  height: 100%;
   padding: 10px;
 
   box-shadow: 0px 0px 20px var(--background-cells);
@@ -183,7 +179,60 @@ main{
   font-size: 7rem;
 }
 
-/* modal do vencerdor */
+.score-container{
+  /* height: 30px; */
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--violet);
+  color: var(--background-cells);
+
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+
+.winner-modal{
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--violet);
+  color: #fff;
+}
+
+.winner-modal h2{
+  font-size: 2rem;
+}
+
+.winner-modal p{
+  font-size: 1.5rem;
+}
+
+.winner-modal input{
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  padding: 5px;
+  background-color: #fff;
+  color: var(--background-cells);
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.winner-modal input:hover{
+  background-color:#442e92;
+  color: #fff;
+}
 
 footer{
   background-color: #111;

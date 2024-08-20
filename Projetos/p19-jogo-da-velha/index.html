@@ -32,33 +32,52 @@
     </section>
 
     <section class="game-container ">
-      <h2><span class="span-player2">Player's</span> turn!</h2>
       <!-- criar o elemento HTML i e adicionar na div com appendChild -->
       <!-- <i class="fa-solid fa-xmark"></i> -->
       <!-- <i class="fa-regular fa-circle"></i> -->
+      <h2><span class="x-color">Player's</span> turn!</h2>
       <div class="game-table">
         <div data-index-cell="0" class="cells">
-          <i class="fa-regular fa-circle"></i>
+          <i class="fa-regular fa-circle circle-color"></i>
         </div>
         <div data-index-cell="1" class="cells">
-          x
+        
         </div>
-        <div data-index-cell="2" class="cells">o</div>
-        <div data-index-cell="3" class="cells">x</div>
-        <div data-index-cell="4" class="cells">x</div>
-        <div data-index-cell="5" class="cells">o</div>
-        <div data-index-cell="6" class="cells">x</div>
-        <div data-index-cell="7" class="cells">o</div>
-        <div data-index-cell="8" class="cells">x</div>
+        <div data-index-cell="2" class="cells">
+
+        </div>
+        <div data-index-cell="3" class="cells">
+
+        </div>
+        <div data-index-cell="4" class="cells">
+
+        </div>
+        <div data-index-cell="5" class="cells">
+
+        </div>
+        <div data-index-cell="6" class="cells">
+
+        </div>
+        <div data-index-cell="7" class="cells">
+
+        </div>
+        <div data-index-cell="8" class="cells">
+
+        </div>
+      </div>
+      <div class="score-container">
+        <p>Player 1 wins</p>
+        <p>Draws</p>
+        <p>Player 2 wins</p>
       </div>
     </section>
 
     <!-- winner modal -->
-    <section class="winner-modal hide">
-      <h2>Player</h2>
+    <section class="winner-modal ">
+      <h2><span>Player</span></h2>
       <p>has won the match!</p>
       <input type="button" value="Play Again">
-      <input type="button" value="Exit game">
+      <!-- <input type="button" value="Exit game"> -->
     </section>
   </main>
 
