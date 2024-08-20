@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic-tac-toe</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/script.js" defer></script>
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,23 +23,24 @@
   <main>
     <!-- players modal -->
 
-    <section class="name-container hide">
+    <section class="name-container ">
       <h2>Defina o nome dos jogadores</h2>
-      <label for="name1" id="player1">Jogador 1:</label>
+      <label for="name1" class="player1-color">Jogador 1:</label>
       <input type="text" id="name1">
-      <label for="name2" id="player2">Jogador 2:</label>
+      <label for="name2" class="player2-color">Jogador 2:</label>
       <input type="text" id="name2">
       <input type="button" class="start-btn " value="Start">
     </section>
 
-    <section class="game-container ">
+    <section class="game-container hide">
       <!-- criar o elemento HTML i e adicionar na div com appendChild -->
       <!-- <i class="fa-solid fa-xmark"></i> -->
       <!-- <i class="fa-regular fa-circle"></i> -->
       <h2><span class="x-color">Player's</span> turn!</h2>
       <div class="game-table">
         <div data-index-cell="0" class="cells">
-          <i class="fa-regular fa-circle circle-color"></i>
+          <!-- <i class="fa-regular fa-circle circle-color hide"></i> -->
+          
         </div>
         <div data-index-cell="1" class="cells">
         
@@ -49,7 +51,7 @@
         <div data-index-cell="3" class="cells">
 
         </div>
-        <div data-index-cell="4" class="cells">
+        <div data-index-cell="4" class="cells ">
 
         </div>
         <div data-index-cell="5" class="cells">
@@ -66,14 +68,14 @@
         </div>
       </div>
       <div class="score-container">
-        <p>Player 1 wins</p>
-        <p>Draws</p>
-        <p>Player 2 wins</p>
+        <p class="player1-color">0</p>
+        <p class="">0</p>
+        <p class="player2-color">0</p>
       </div>
     </section>
 
     <!-- winner modal -->
-    <section class="winner-modal ">
+    <section class="winner-modal hide">
       <h2><span>Player</span></h2>
       <p>has won the match!</p>
       <input type="button" value="Play Again">
