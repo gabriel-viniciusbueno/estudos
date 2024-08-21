@@ -1,21 +1,11 @@
-import { playerNames } from "./script.js";
+export const playerNames = []
+export function startGame(){
+  const player1Input = document.getElementById('name1')
+  const player2Input = document.getElementById('name2')
 
-document.querySelector('.start-btn').addEventListener('click', function () {
-  const playerName1 = document.getElementById('name1').value;
-  const playerName2 = document.getElementById('name2').value;
+  playerNames.push(player1Input.value, player2Input.value);
 
-  playerNames.push(playerName1, playerName2)
-
-  const namesModal = document.querySelector('.name-container')
-  const gameModal = document.querySelector('.game-container')
-
-  namesModal.classList.toggle('hide');
-  gameModal.classList.toggle('hide')
   console.log(playerNames)
-});
-
-
-
-
+}
 
 
