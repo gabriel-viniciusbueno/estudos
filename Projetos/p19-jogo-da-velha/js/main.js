@@ -5,6 +5,8 @@ import {switchPlayer, selectCell} from './utils.js';
 let playerOne
 let playerTwo
 
+const gameTable = ['', '','','','','','','','']
+
 const startBtn = document.querySelector('.start-btn');
 
 startBtn.addEventListener('click', startGame);
@@ -14,12 +16,29 @@ document.querySelectorAll('.cells').forEach((cell) => {
 
     playerOne = playerNames[0]
     playerTwo = playerNames[1]
-    switchPlayer(playerOne, playerTwo)
+
+    const cellIndex = cell.getAttribute('data-index-cell')
+    gameTable[cellIndex] = cellIndex
+
+    // valid cell check
+    // gameTable.forEach((e) => {
+    //   if(e === ''){
+    //     // continuar jogo
+    //   } else {
+    //     // erro
+    //   }
+    // })
+
+    for( let i = 0; i <= gameTable.length; i++){
+      if(gameTable[i] === ''){
+        // enquanto isso aqui for true, rode o jogo
+      }
+    }
 
     selectCell(cell, playerOne, playerTwo)
+    switchPlayer(playerOne, playerTwo)
     
     // getting cell data index
-    // console.log(cell.getAttribute('data-index-cell'))
      
   })
 })

@@ -15,10 +15,10 @@ export function selectCell(cell, p1, p2){
   const selectedCell = document.createElement('i')
   
   if(currentPlayer === p1){
-    selectedCell.classList.add('fa-regular', 'fa-circle')
+    selectedCell.classList.add('fa-solid', 'fa-xmark', 'player1-color');
     
   } else if(currentPlayer === p2){
-    selectedCell.classList.add('fa-solid', 'fa-xmark');
+    selectedCell.classList.add('fa-regular', 'fa-circle', 'player2-color')
   }
 
   cell.appendChild(selectedCell)
