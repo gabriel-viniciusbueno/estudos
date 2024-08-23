@@ -1,3 +1,5 @@
+import { switchPlayer } from "./utils.js"
+
 // input is a valid value
 function isValidName(){
   
@@ -23,9 +25,14 @@ export function startGame(){
   playerTurnHeader.innerHTML = player1Input.value
 
   playerNames.push(player1Input.value, player2Input.value);
+
+  let playerOne = playerNames[0]
+  let playerTwo = playerNames[1]
+
+  switchPlayer(playerOne, playerTwo)
+
   displayGameBoard()
-  
-  console.log(playerNames)
+
 }
 
 
