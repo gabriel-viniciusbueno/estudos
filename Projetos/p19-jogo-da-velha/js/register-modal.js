@@ -1,4 +1,4 @@
-import { switchPlayer } from "./utils.js"
+import { switchPlayer } from "./game.js"
 
 // input is a valid value
 function isValidName(){
