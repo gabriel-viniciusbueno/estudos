@@ -20,10 +20,10 @@ document.querySelectorAll('.cells').forEach((cell) => {
       return
     }
       
+    checkWinner()
     playerOne = playerNames[0]
     playerTwo = playerNames[1]
     selectCell(cell, playerOne, playerTwo)
-    checkWinner()
     switchPlayer(playerOne, playerTwo)
   })
 })
