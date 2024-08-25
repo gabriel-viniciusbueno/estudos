@@ -1,6 +1,6 @@
 // import {startGame, showPlayerTurn} from './players-name.js'
 import {startGame, playerNames} from './register-modal.js';
-import {switchPlayer, selectCell, isValidCell, checkWinner} from './game.js';
+import {switchPlayer, selectCell, isValidCell, checkWinner, gameIsOver} from './game.js';
 
 let playerOne
 let playerTwo
@@ -14,12 +14,18 @@ startBtn.addEventListener('click', startGame);
 document.querySelectorAll('.cells').forEach((cell) => {
 
   cell.addEventListener('click', () => {
+    if(!gameIsOver){
+      
+    } else {
+      return
+    }
+
     if(isValidCell(cell)){
       cell.classList.add('cells-clicked')
     } else {
       return
     }
-      
+
     checkWinner()
     playerOne = playerNames[0]
     playerTwo = playerNames[1]
@@ -28,9 +34,6 @@ document.querySelectorAll('.cells').forEach((cell) => {
   })
 })
 
-// checkwinner
-// com um for, verificar se todos os elementos do array de arrays (winCondition) está preenchido com o mesmo dado
-
-
-
-
+function cellEvents(){
+  
+}

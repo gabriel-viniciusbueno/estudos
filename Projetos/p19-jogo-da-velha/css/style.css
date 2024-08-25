@@ -16,6 +16,11 @@
   --yellow: #ffcf40;
 }
 
+@keyframes fadein{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 body{
   width: 100%;
   height: 100vh;
@@ -181,7 +186,9 @@ main{
 }
 
 .cells-winner{
-  background-color: var(--violet);
+  background-color: rgb(69, 38, 245);
+  border: 3px solid var(--violet);
+  box-shadow: 0 0 10px var(--violet);
   cursor: default;
 }
 
@@ -213,6 +220,7 @@ main{
   justify-content: space-between;
   background-color: var(--violet);
   color: var(--background);
+  animation: fadein 2s ease-in;
 }
 
 .winner-modal h2{
