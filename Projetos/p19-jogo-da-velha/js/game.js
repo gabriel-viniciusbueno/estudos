@@ -1,4 +1,5 @@
 let currentPlayer 
+const gameTable = ['', '','','','','','','','']
 
 
 function updatePlayerTurnHeader(currentPlayer){
@@ -11,7 +12,18 @@ export function switchPlayer(p1, p2){
   updatePlayerTurnHeader(currentPlayer)
 }
 
+ export function isValidCell(cell){
+  const cellIndex = cell.getAttribute('data-index-cell')
+
+  if(gameTable[cellIndex] == ''){
+    return gameTable[cellIndex] = currentPlayer
+    
+  } else{
+    return false
+  }
+}
 export function selectCell(cell, p1, p2){
+
   const selectedCell = document.createElement('i')
   
   if(currentPlayer === p1){
@@ -25,7 +37,3 @@ export function selectCell(cell, p1, p2){
 
   // invalidCell(cell)
 }
-
-// function invalidCell(cell){
-//   cell.removeEventListener('click', selectCell)
-// }
