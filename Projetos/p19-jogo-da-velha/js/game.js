@@ -1,4 +1,5 @@
 import {playerNames} from './register-modal.js'
+// import {} from './register-modal.js'
 
 let currentPlayer;
 export let  gameIsOver = false
@@ -111,6 +112,7 @@ function drawScores(){
 
 export function restartGame(){
   gameTable = ['', '','','','','','','','']
+  playerNames = []
   gameIsOver = false
   
   const gameModal = document.querySelector('.game-container')
