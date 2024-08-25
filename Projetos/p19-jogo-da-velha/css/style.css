@@ -106,6 +106,7 @@ main{
 
 .player2-color{
   color: var(--blue);
+  /* background-color: white; */
 }
 
 .name-container .start-btn{
@@ -185,6 +186,11 @@ main{
   font-size: 7rem;
 }
 
+.cells-winner{
+  /* background-color: var(--background-cells); */
+  /* cursor: default; */
+}
+
 .score-container{
   display: flex;
   justify-content: space-between;
@@ -192,7 +198,6 @@ main{
   border: 2px solid var(--violet);
   color: #fff;
 
-  /* font-family: 'Raleway', sans-serif; */
   font-size: 3rem;
   font-weight: bold;
   width: 100%;

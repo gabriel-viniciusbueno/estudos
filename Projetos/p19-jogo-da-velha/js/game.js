@@ -1,5 +1,15 @@
-let currentPlayer 
-const gameTable = ['', '','','','','','','','']
+let currentPlayer;
+const gameTable = ['', '','','','','','','',''];
+const winCondition = [
+  [0,1,2],
+  [3,4,5],
+  [6,7,8],
+  [0,3,6],
+  [1,4,7],
+  [2,5,8],
+  [0,4,8],
+  [2,4,6]
+]
 
 
 function updatePlayerTurnHeader(currentPlayer){
@@ -36,4 +46,24 @@ export function selectCell(cell, p1, p2){
   cell.appendChild(selectedCell)
 
   // invalidCell(cell)
+}
+
+export function checkWinner(cell){
+
+  if(gameTable.includes('')){
+    for(let i = 0; i < winCondition.length; i++){
+      const condition = winCondition[i] // = [0,1,2]
+      const cellA = gameTable[condition[0]] // = ['este','','']
+      const cellB = gameTable[condition[1]] // = ['','este','']
+      const cellC = gameTable[condition[2]] // = ['','','este']
+
+      if(cellA != '' && cellA == cellB && cellB == cellC){
+        console.log(`the winner is ${currentPlayer}`)
+      }
+    }
+  } else {
+    // draw modal
+    // draw score
+    console.log('its a draw')
+  }
 }
