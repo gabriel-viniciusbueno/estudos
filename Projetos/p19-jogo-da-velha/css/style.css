@@ -235,7 +235,8 @@ main{
 }
 
 .winner-modal input,
-.draw-modal input{
+.draw-modal input,
+.restart-game{
   width: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;

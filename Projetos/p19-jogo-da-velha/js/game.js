@@ -2,7 +2,7 @@ import {playerNames} from './register-modal.js'
 
 let currentPlayer;
 export let  gameIsOver = false
-const gameTable = ['', '','','','','','','',''];
+let gameTable = ['', '','','','','','','',''];
 const winCondition = [
   [0,1,2],
   [3,4,5],
@@ -36,21 +36,18 @@ export function switchPlayer(p1, p2){
   }
 }
 export function selectCell(cell, p1, p2){
-
   const selectedCell = document.createElement('i')
-  
   if(currentPlayer === p1){
-    selectedCell.classList.add('fa-solid', 'fa-xmark', 'player1-color');
+    selectedCell.classList.add('fa-solid', 'fa-xmark', 'player1-color', 'remove');
     
   } else if(currentPlayer === p2){
-    selectedCell.classList.add('fa-regular', 'fa-circle', 'player2-color')
+    selectedCell.classList.add('fa-regular', 'fa-circle', 'player2-color', 'remove')
   }
 
   cell.appendChild(selectedCell)
 }
 
 export function checkWinner(){
-
   for(let i = 0; i < winCondition.length; i++){
     const condition = winCondition[i] 
     // console.log(winCondition[i])
@@ -81,10 +78,12 @@ export function checkWinner(){
 }
 
 export function checkDraw(){
+  console.log(gameTable)
   if(!gameTable.includes('')){
+    drawScores()
+    gameIsOver = true
     const drawModal = document.querySelector('.draw-modal')
     drawModal.classList.remove('hide')
-    drawScores()
   }
 }
 
@@ -108,4 +107,60 @@ function drawScores(){
   let text = drawScore.textContent
   let number = parseInt(text) + 1
   drawScore.innerHTML = number
+}
+
+export function restartGame(){
+  gameTable = ['', '','','','','','','','']
+  gameIsOver = false
+  
+  const gameModal = document.querySelector('.game-container')
+  gameModal.classList.add('hide')
+  const nameModal = document.querySelector('.name-container')
+  nameModal.classList.remove('hide')
+  const winnerModal = document.querySelector('.winner-modal')
+  winnerModal.classList.add('hide')
+  const drawModal = document.querySelector('.draw-modal')
+  drawModal.classList.add('hide')
+  
+  const cells = document.querySelectorAll('.cells')
+  const cellsIcon = document.querySelectorAll('.remove')
+  cellsIcon.forEach((icon) => {
+    icon.remove()
+  })
+  
+  cells.forEach((cell) => {
+    cell.classList.remove('cells-winner')
+    cell.classList.remove('cells-clicked')
+  })
+
+  let p1Score = document.getElementById('player1-score')
+  p1Score.textContent = 0
+
+  let p2Score = document.getElementById('player2-score')
+  p2Score.textContent = 0
+
+  let drawScore = document.getElementById('draw-score')
+  drawScore.textContent = 0
+
+}
+
+export function playAgain(){
+  const cells = document.querySelectorAll('.cells')
+  const cellsIcon = document.querySelectorAll('.remove')
+  cellsIcon.forEach((icon) => {
+    icon.remove()
+  })
+
+  const winnerModal = document.querySelector('.winner-modal')
+  winnerModal.classList.add('hide')
+  const drawModal = document.querySelector('.draw-modal')
+  drawModal.classList.add('hide')
+  
+  cells.forEach((cell) => {
+    cell.classList.remove('cells-winner')
+    cell.classList.remove('cells-clicked')
+  })
+
+  gameTable = ['', '','','','','','','','']
+  gameIsOver = false
 }
