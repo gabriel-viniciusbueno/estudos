@@ -1,6 +1,6 @@
 // import {startGame, showPlayerTurn} from './players-name.js'
 import {startGame, playerNames} from './register-modal.js';
-import {switchPlayer, selectCell, isValidCell, checkWinner, gameIsOver} from './game.js';
+import {switchPlayer, selectCell, isValidCell, checkWinner, checkDraw, gameIsOver} from './game.js';
 
 let playerOne
 let playerTwo
@@ -15,7 +15,7 @@ document.querySelectorAll('.cells').forEach((cell) => {
 
   cell.addEventListener('click', () => {
     if(!gameIsOver){
-      
+      checkDraw()
     } else {
       return
     }
@@ -27,6 +27,7 @@ document.querySelectorAll('.cells').forEach((cell) => {
     }
 
     checkWinner()
+
     playerOne = playerNames[0]
     playerTwo = playerNames[1]
     selectCell(cell, playerOne, playerTwo)

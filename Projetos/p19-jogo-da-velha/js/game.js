@@ -1,3 +1,5 @@
+import {playerNames} from './register-modal.js'
+
 let currentPlayer;
 export let  gameIsOver = false
 const gameTable = ['', '','','','','','','',''];
@@ -49,35 +51,61 @@ export function selectCell(cell, p1, p2){
 
 export function checkWinner(){
 
-  if(gameTable.includes('')){
-    for(let i = 0; i < winCondition.length; i++){
-      const condition = winCondition[i] 
-      // console.log(winCondition[i])
-      const cellA = gameTable[condition[0]]
-      const cellB = gameTable[condition[1]]
-      const cellC = gameTable[condition[2]]
-
-      if(cellA != '' && cellA == cellB && cellB == cellC){
-        gameIsOver = true
-        const cells = document.querySelectorAll('.cells')
-        
-        cells[condition[0]].classList.add('cells-winner')
-        cells[condition[1]].classList.add('cells-winner')
-        cells[condition[2]].classList.add('cells-winner')
-
-        setTimeout(function(){
-          const winnerModal = document.querySelector('.winner-modal')
-
-          winnerModal.classList.remove('hide')
-          winnerModal.classList.add('winner-modal-active')
-        }, 1000)
-        console.log(`the winner is ${currentPlayer}`)
-
-      }
+  for(let i = 0; i < winCondition.length; i++){
+    const condition = winCondition[i] 
+    // console.log(winCondition[i])
+    const cellA = gameTable[condition[0]]
+    const cellB = gameTable[condition[1]]
+    const cellC = gameTable[condition[2]]
+    
+    if(cellA != '' && cellA == cellB && cellB == cellC){
+      gameIsOver = true
+      const cells = document.querySelectorAll('.cells')
+      
+      cells[condition[0]].classList.add('cells-winner')
+      cells[condition[1]].classList.add('cells-winner')
+      cells[condition[2]].classList.add('cells-winner')
+      
+      const winnerModal = document.querySelector('.winner-modal')
+      const winnerIs = document.querySelector('.winner-modal h2 span')
+      winnerModal.classList.remove('hide')
+      winnerIs.textContent = currentPlayer
+      
+      
+      const player1Name = playerNames[0]
+      const player2Name = playerNames[1]
+      playerScores(player1Name, player2Name)
     }
-  } else {
-    // draw modal
-    // draw score
-    console.log('its a draw')
   }
+
+}
+
+export function checkDraw(){
+  if(!gameTable.includes('')){
+    const drawModal = document.querySelector('.draw-modal')
+    drawModal.classList.remove('hide')
+    drawScores()
+  }
+}
+
+function playerScores(p1, p2){
+  if(currentPlayer == p1){
+    let p1Score = document.getElementById('player1-score')
+    let text = p1Score.textContent
+    let number = parseInt(text) + 1
+    p1Score.innerHTML = number
+
+  } else if(currentPlayer == p2){
+    let p2Score = document.getElementById('player2-score')
+    let text = p2Score.textContent
+    let number = parseInt(text) + 1
+    p2Score.innerHTML = number
+  }
+}
+
+function drawScores(){
+  let drawScore = document.getElementById('draw-score')
+  let text = drawScore.textContent
+  let number = parseInt(text) + 1
+  drawScore.innerHTML = number
 }

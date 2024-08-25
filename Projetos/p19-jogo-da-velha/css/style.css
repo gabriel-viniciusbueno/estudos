@@ -206,7 +206,8 @@ main{
   gap: 10px;
 }
 
-.winner-modal{
+.winner-modal,
+.draw-modal{
   width: 400px;
   height: 120px;
   position: absolute;
@@ -223,15 +224,18 @@ main{
   animation: fadein 2s ease-in;
 }
 
-.winner-modal h2{
+.winner-modal h2,
+.draw-modal h2{
   font-size: 2.5rem;
 }
 
-.winner-modal p{
+.winner-modal p,
+.draw-modal p{
   font-size: 1.5rem;
 }
 
-.winner-modal input{
+.winner-modal input,
+.draw-modal input{
   width: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -246,7 +250,8 @@ main{
   transition: .3s;
 }
 
-.winner-modal input:hover{
+.winner-modal input:hover,
+.draw-modal input:hover{
   background-color:#442e92;
   color: #fff;
 }

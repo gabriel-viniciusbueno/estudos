@@ -24,10 +24,10 @@
     <!-- players modal -->
 
     <section class="name-container ">
-      <h2>Defina o nome dos jogadores</h2>
-      <label for="name1" class="player1-color">Jogador 1:</label>
+      <h2>Players Names</h2>
+      <label for="name1" class="player1-color">Player 1:</label>
       <input type="text" id="name1">
-      <label for="name2" class="player2-color">Jogador 2:</label>
+      <label for="name2" class="player2-color">Player 2:</label>
       <input type="text" id="name2">
       <input type="button" class="start-btn " value="Start">
     </section>
@@ -68,9 +68,10 @@
         </div>
       </div>
       <div class="score-container">
-        <p class="player1-color">0</p>
-        <p class="">0</p>
-        <p class="player2-color">0</p>
+        <p id="player1-score" class="player1-color">0</p>
+        
+        <p id="draw-score">0</p>
+        <p id="player2-score" class="player2-color">0</p>
       </div>
     </section>
 
@@ -82,7 +83,7 @@
       <!-- <input type="button" value="Exit game"> -->
     </section>
 
-    <section class="winner-modal hide">
+    <section class="draw-modal hide">
       <h2><span>It's a draw!</span></h2>
       <p>no one has won the match!</p>
       <input type="button" value="Play Again">
