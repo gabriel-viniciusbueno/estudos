@@ -23,9 +23,9 @@ export function selectCell(cell, p1, p2){
 
   cell.appendChild(selectedCell)
 
-  invalidCell(cell)
+  // invalidCell(cell)
 }
 
-function invalidCell(cell){
-  cell.removeEventListener('click', selectCell)
-}
+// function invalidCell(cell){
+//   cell.removeEventListener('click', selectCell)
+// }
