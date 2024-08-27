@@ -15,7 +15,7 @@ function displayGameBoard(){
   gameBoard.classList.toggle('hide')
 }
 
-export let playerNames = []
+export const playerNames = []
 
 export function startGame(){
   const player1Input = document.getElementById('name1')

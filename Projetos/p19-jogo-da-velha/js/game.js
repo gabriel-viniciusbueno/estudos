@@ -93,13 +93,18 @@ function playerScores(p1, p2){
     let p1Score = document.getElementById('player1-score')
     let text = p1Score.textContent
     let number = parseInt(text) + 1
-    p1Score.innerHTML = number
+    localStorage.setItem('player1', number)
+    const savedScore = localStorage.getItem('player1')
+    p1Score.innerHTML = savedScore
+
 
   } else if(currentPlayer == p2){
     let p2Score = document.getElementById('player2-score')
     let text = p2Score.textContent
     let number = parseInt(text) + 1
-    p2Score.innerHTML = number
+    localStorage.setItem('player2', number)
+    const savedScore = localStorage.getItem('player2')
+    p2Score.innerHTML = savedScore
   }
 }
 
@@ -107,12 +112,14 @@ function drawScores(){
   let drawScore = document.getElementById('draw-score')
   let text = drawScore.textContent
   let number = parseInt(text) + 1
-  drawScore.innerHTML = number
+  localStorage.setItem('drawscore', number)
+  const savedScore = localStorage.getItem('drawscore')
+  drawScore.innerHTML = savedScore
 }
-
-export function restartGame(){
+export function restartGame(p1, p2){
   gameTable = ['', '','','','','','','','']
-  playerNames = []
+  playerNames.shift()
+  playerNames.pop()
   gameIsOver = false
   
   const gameModal = document.querySelector('.game-container')
