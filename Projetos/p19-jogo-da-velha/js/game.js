@@ -27,9 +27,11 @@ export function switchPlayer(p1, p2){
 }
 
  export function isValidCell(cell){
+  
   const cellIndex = cell.getAttribute('data-index-cell')
 
   if(gameTable[cellIndex] == ''){
+    console.log('célula válida')
     return gameTable[cellIndex] = currentPlayer
     
   } else{

@@ -14,17 +14,18 @@ startBtn.addEventListener('click', startGame);
 document.querySelectorAll('.cells').forEach((cell) => {
 
   cell.addEventListener('click', () => {
-    if(isValidCell(cell)){
+    if(isValidCell(cell) && !gameIsOver){
       cell.classList.add('cells-clicked')
+      playerOne = playerNames[0]
+      playerTwo = playerNames[1]
+      selectCell(cell, playerOne, playerTwo)
     } else {
       return
     }
 
     checkWinner()
 
-    playerOne = playerNames[0]
-    playerTwo = playerNames[1]
-    selectCell(cell, playerOne, playerTwo)
+
 
     if(!gameIsOver){
       checkDraw()
