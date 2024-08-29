@@ -267,12 +267,10 @@ footer{
 footer a{
   font-family: 'Raleway';
   color: #FFF;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 10px;
-}
 
-footer a:hover{
-  background-color: var(--header);
+  text-decoration: none;
 }
 
 .hide{
